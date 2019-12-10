@@ -19,6 +19,8 @@ class ListViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
 
+    tableView.tableFooterView = UIView()
+
     viewModel.loadNew()
   }
 
@@ -27,7 +29,11 @@ class ListViewController: UIViewController {
   }
 }
 
-extension ListViewController: UITableViewDelegate {}
+extension ListViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 100
+  }
+}
 
 extension ListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
