@@ -1,6 +1,7 @@
 ---
 excluded:
-- Pods, Carthage
+- Pods
+- Carthage
 
 opt_in_rules:
 - closing_brace

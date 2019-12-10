@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		A604D84A2330945F00B1FBB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A604D8492330945F00B1FBB6 /* Assets.xcassets */; };
 		A604D84D2330945F00B1FBB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A604D84B2330945F00B1FBB6 /* LaunchScreen.storyboard */; };
 		A604D8582330945F00B1FBB6 /* VideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8572330945F00B1FBB6 /* VideoPlayerTests.swift */; };
+		D24D79C7239FCEA700BCC941 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D79C6239FCEA700BCC941 /* R.generated.swift */; };
 		FBCD80591A8679A4B686D5D6 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		A604D8592330945F00B1FBB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7808E9EDA2CBC271BE1F28E /* Pods_VideoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA18780B7E7D05539AEFE5C4 /* Pods-VideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		D24D79C6239FCEA700BCC941 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,6 @@
 				796C53841982B333B0EA61C7 /* Pods-VideoPlayerTests.debug.xcconfig */,
 				762229DA36C91CF42232773D /* Pods-VideoPlayerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -110,11 +111,9 @@
 		A604D8412330945C00B1FBB6 /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				A604D8422330945C00B1FBB6 /* AppDelegate.swift */,
-				A604D8442330945C00B1FBB6 /* ViewController.swift */,
-				A604D8462330945C00B1FBB6 /* Main.storyboard */,
+				D24D79C5239FCE8500BCC941 /* Classes */,
+				D24D79C4239FCE4300BCC941 /* Resources */,
 				A604D8492330945F00B1FBB6 /* Assets.xcassets */,
-				A604D84B2330945F00B1FBB6 /* LaunchScreen.storyboard */,
 				A604D84E2330945F00B1FBB6 /* Info.plist */,
 			);
 			path = VideoPlayer;
@@ -129,6 +128,33 @@
 			path = VideoPlayerTests;
 			sourceTree = "<group>";
 		};
+		D24D79C4239FCE4300BCC941 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D24D79C8239FCEB500BCC941 /* storyboard */,
+				D24D79C6239FCEA700BCC941 /* R.generated.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D24D79C5239FCE8500BCC941 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A604D8422330945C00B1FBB6 /* AppDelegate.swift */,
+				A604D8442330945C00B1FBB6 /* ViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D24D79C8239FCEB500BCC941 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A604D8462330945C00B1FBB6 /* Main.storyboard */,
+				A604D84B2330945F00B1FBB6 /* LaunchScreen.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +163,9 @@
 			buildConfigurationList = A604D85C2330945F00B1FBB6 /* Build configuration list for PBXNativeTarget "VideoPlayer" */;
 			buildPhases = (
 				D37D1FD68ACC804E87FD33F4 /* [CP] Check Pods Manifest.lock */,
+				D24D79CA239FCF3100BCC941 /* swiftformat */,
+				D24D79C9239FCF1500BCC941 /* swiftlint */,
+				D24D79C2239FCD5A00BCC941 /* R.swift */,
 				A604D83B2330945C00B1FBB6 /* Sources */,
 				A604D83C2330945C00B1FBB6 /* Frameworks */,
 				A604D83D2330945C00B1FBB6 /* Resources */,
@@ -268,6 +297,63 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D24D79C2239FCD5A00BCC941 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/VideoPlayer/Resources/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo 'make R.generated.swift'\nif [ -e \"$SRCROOT/VideoPlayer/Resources/R.generated.swift\" ]; then\necho 'remove R.generated.swift'\nrm \"$SRCROOT/VideoPlayer/Resources/R.generated.swift\"\nfi\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/VideoPlayer/Resources/R.generated.swift\"\n";
+		};
+		D24D79C9239FCF1500BCC941 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z ${CI+x} ];then\n  if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\n  else\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n  fi\nfi;\n";
+		};
+		D24D79CA239FCF3100BCC941 /* swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.swiftformat",
+			);
+			name = swiftformat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . \n";
+		};
 		D37D1FD68ACC804E87FD33F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +385,7 @@
 			files = (
 				A604D8452330945C00B1FBB6 /* ViewController.swift in Sources */,
 				A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */,
+				D24D79C7239FCEA700BCC941 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
