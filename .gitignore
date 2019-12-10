@@ -10,10 +10,6 @@ DerivedData/
 #project workspaceData
 !*.xcworkspace/contents.xcworkspacedata
 
-#cocoaPods
-Pods/*
-
-
 UserInterfaceState.xcuserstate
 
 # personal files
@@ -22,8 +18,8 @@ UserInterfaceState.xcuserstate
 !*.plist
 .dat.*
 
+#cocoaPods
+Pods/*
+
 # carthage
-Carthage/Checkouts/*
-Carthage/Build/watchOS/*
-Carthage/Build/tvOS/*
-Carthage/Build/Mac/*
+Carthage/*
