@@ -1,0 +1,29 @@
+# metafile
+.DS_Store
+
+# personal log
+DerivedData/
+
+# project configfile
+!*.xcodeproj/project.pbxproj
+
+#project workspaceData
+!*.xcworkspace/contents.xcworkspacedata
+
+#cocoaPods
+Pods/*
+
+
+UserInterfaceState.xcuserstate
+
+# personal files
+*.xcodeproj/xcuserdata/*
+*.xcworkspace/xcuserdata/*
+!*.plist
+.dat.*
+
+# carthage
+Carthage/Checkouts/*
+Carthage/Build/watchOS/*
+Carthage/Build/tvOS/*
+Carthage/Build/Mac/*
