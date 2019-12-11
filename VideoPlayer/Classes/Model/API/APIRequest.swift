@@ -8,11 +8,11 @@
 
 import Foundation
 import Alamofire
-// import SwiftyJSON
+import SwiftyJSON
 
 enum VPAPIResponse<T> {
-    case success(T)
-    case error(VPError)
+  case success(T)
+  case error(VPError)
 }
 
 extension APIModel {
