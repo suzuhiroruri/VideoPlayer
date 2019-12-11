@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		88A033FB0734979119D25FE7 /* Pods_VideoPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7808E9EDA2CBC271BE1F28E /* Pods_VideoPlayer.framework */; };
+		A5615E4523A0BB4600907091 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
+		A5615E4A23A0C1A000907091 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
+		A5615E4D23A0C1F400907091 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4423A0BB4600907091 /* AlamofireImage.framework */; };
 		A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8422330945C00B1FBB6 /* AppDelegate.swift */; };
 		A604D8452330945C00B1FBB6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8442330945C00B1FBB6 /* ListViewController.swift */; };
 		A604D8482330945C00B1FBB6 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A604D8462330945C00B1FBB6 /* List.storyboard */; };
@@ -36,6 +39,8 @@
 		762229DA36C91CF42232773D /* Pods-VideoPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayerTests.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayerTests/Pods-VideoPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
 		796C53841982B333B0EA61C7 /* Pods-VideoPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayerTests.debug.xcconfig"; path = "Target Support Files/Pods-VideoPlayerTests/Pods-VideoPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5615E4323A0BB4600907091 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A5615E4423A0BB4600907091 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		A604D83F2330945C00B1FBB6 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A604D8422330945C00B1FBB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A604D8442330945C00B1FBB6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +65,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A033FB0734979119D25FE7 /* Pods_VideoPlayer.framework in Frameworks */,
+				A5615E4A23A0C1A000907091 /* Alamofire.framework in Frameworks */,
+				A5615E4523A0BB4600907091 /* Alamofire.framework in Frameworks */,
+				A5615E4D23A0C1F400907091 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +96,8 @@
 		527B46416F7BF13A08AC102B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5615E4323A0BB4600907091 /* Alamofire.framework */,
+				A5615E4423A0BB4600907091 /* AlamofireImage.framework */,
 				A7808E9EDA2CBC271BE1F28E /* Pods_VideoPlayer.framework */,
 				8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */,
 			);
@@ -203,6 +213,7 @@
 				A604D83C2330945C00B1FBB6 /* Frameworks */,
 				A604D83D2330945C00B1FBB6 /* Resources */,
 				A4F88F5F30B705B42BD1EC48 /* [CP] Embed Pods Frameworks */,
+				A5615E4223A0BB1300907091 /* carthage */,
 			);
 			buildRules = (
 			);
@@ -330,6 +341,26 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A5615E4223A0BB1300907091 /* carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+			);
+			name = carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		D24D79C2239FCD5A00BCC941 /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -587,6 +618,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JMCJCA8J2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -608,6 +643,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JMCJCA8J2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
