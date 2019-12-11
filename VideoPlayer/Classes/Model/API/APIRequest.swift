@@ -37,40 +37,40 @@ extension APIModel {
       // req.timeoutInterval = Bundle.timeout()
       req.setValue("text/plain, application/json, text/html", forHTTPHeaderField: "Accept")
     } catch {
-      completionBlock()
+      completionBlock(.error(.apiServerUnknownError))
       return
     }
     currentRequest = Alamofire.request(req)
 
     currentRequest?.responseData(queue: DispatchQueue.global(), completionHandler: {[weak self] response in
       guard self != nil else {
-        completionBlock()
+        completionBlock(.error(.apiServerUnknownError))
         return
       }
       switch response.result {
       case .success(let data):
         guard response.response != nil else {
-          completionBlock()
+          completionBlock(.error(.apiServerUnknownError))
           return
         }
 
-        var json = JSON(data)
+        let json = JSON(data)
 
         guard json.error == nil else {
-          completionBlock()
+          completionBlock(.error(.apiServerUnknownError))
           return
         }
 
         completionBlock(.success(json))
       case .failure(let error):
         guard let error = error as? URLError else {
-          completionBlock()
+          completionBlock(.error(.apiServerUnknownError))
           return
         }
         if error.code  == URLError.Code.notConnectedToInternet {
           return
         } else {
-          completionBlock()
+          completionBlock(.error(.apiServerUnknownError))
           return
         }
       }
