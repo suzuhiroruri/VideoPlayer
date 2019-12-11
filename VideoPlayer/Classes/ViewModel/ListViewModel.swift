@@ -9,6 +9,5 @@
 import Foundation
 
 class ListViewModel {
-
   func loadNew() {}
 }
