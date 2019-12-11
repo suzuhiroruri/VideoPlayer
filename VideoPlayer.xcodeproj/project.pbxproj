@@ -16,6 +16,7 @@
 		A5615E5823A0E73000907091 /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5723A0E73000907091 /* Bundle+.swift */; };
 		A5615E5A23A0E90100907091 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5923A0E90100907091 /* APIRequest.swift */; };
 		A5615E5C23A0EBFF00907091 /* VPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5B23A0EBFF00907091 /* VPError.swift */; };
+		A5615E5E23A0EDA300907091 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E5D23A0EDA300907091 /* SwiftyJSON.framework */; };
 		A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8422330945C00B1FBB6 /* AppDelegate.swift */; };
 		A604D8452330945C00B1FBB6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8442330945C00B1FBB6 /* ListViewController.swift */; };
 		A604D8482330945C00B1FBB6 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A604D8462330945C00B1FBB6 /* List.storyboard */; };
@@ -51,6 +52,7 @@
 		A5615E5723A0E73000907091 /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
 		A5615E5923A0E90100907091 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		A5615E5B23A0EBFF00907091 /* VPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPError.swift; sourceTree = "<group>"; };
+		A5615E5D23A0EDA300907091 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		A604D83F2330945C00B1FBB6 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A604D8422330945C00B1FBB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A604D8442330945C00B1FBB6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5615E5E23A0EDA300907091 /* SwiftyJSON.framework in Frameworks */,
 				88A033FB0734979119D25FE7 /* Pods_VideoPlayer.framework in Frameworks */,
 				A5615E4A23A0C1A000907091 /* Alamofire.framework in Frameworks */,
 				A5615E4523A0BB4600907091 /* Alamofire.framework in Frameworks */,
@@ -106,6 +109,7 @@
 		527B46416F7BF13A08AC102B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5615E5D23A0EDA300907091 /* SwiftyJSON.framework */,
 				A5615E4323A0BB4600907091 /* Alamofire.framework */,
 				A5615E4423A0BB4600907091 /* AlamofireImage.framework */,
 				A7808E9EDA2CBC271BE1F28E /* Pods_VideoPlayer.framework */,
@@ -391,6 +395,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			name = carthage;
 			outputFileListPaths = (
