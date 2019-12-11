@@ -18,6 +18,8 @@ UserInterfaceState.xcuserstate
 !*.plist
 .dat.*
 
+VideoPlayer/Resources/R.generated.swift
+
 #cocoaPods
 Pods/*
 

@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		88A033FB0734979119D25FE7 /* Pods_VideoPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7808E9EDA2CBC271BE1F28E /* Pods_VideoPlayer.framework */; };
+		A5615E4523A0BB4600907091 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
+		A5615E4A23A0C1A000907091 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
+		A5615E4D23A0C1F400907091 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4423A0BB4600907091 /* AlamofireImage.framework */; };
 		A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8422330945C00B1FBB6 /* AppDelegate.swift */; };
-		A604D8452330945C00B1FBB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8442330945C00B1FBB6 /* ViewController.swift */; };
-		A604D8482330945C00B1FBB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A604D8462330945C00B1FBB6 /* Main.storyboard */; };
+		A604D8452330945C00B1FBB6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8442330945C00B1FBB6 /* ListViewController.swift */; };
+		A604D8482330945C00B1FBB6 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A604D8462330945C00B1FBB6 /* List.storyboard */; };
 		A604D84A2330945F00B1FBB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A604D8492330945F00B1FBB6 /* Assets.xcassets */; };
 		A604D84D2330945F00B1FBB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A604D84B2330945F00B1FBB6 /* LaunchScreen.storyboard */; };
 		A604D8582330945F00B1FBB6 /* VideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8572330945F00B1FBB6 /* VideoPlayerTests.swift */; };
 		D24D79C7239FCEA700BCC941 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D79C6239FCEA700BCC941 /* R.generated.swift */; };
+		D24D79CF239FD49F00BCC941 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D79CD239FD49F00BCC941 /* MoviesTableViewCell.swift */; };
+		D24D79D0239FD49F00BCC941 /* MoviesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24D79CE239FD49F00BCC941 /* MoviesTableViewCell.xib */; };
+		D25BF7D8239FD7160001E662 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BF7D7239FD7160001E662 /* ListViewModel.swift */; };
 		FBCD80591A8679A4B686D5D6 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,10 +39,12 @@
 		762229DA36C91CF42232773D /* Pods-VideoPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayerTests.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayerTests/Pods-VideoPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
 		796C53841982B333B0EA61C7 /* Pods-VideoPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayerTests.debug.xcconfig"; path = "Target Support Files/Pods-VideoPlayerTests/Pods-VideoPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5615E4323A0BB4600907091 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A5615E4423A0BB4600907091 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		A604D83F2330945C00B1FBB6 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A604D8422330945C00B1FBB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A604D8442330945C00B1FBB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A604D8472330945C00B1FBB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A604D8442330945C00B1FBB6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		A604D8472330945C00B1FBB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/List.storyboard; sourceTree = "<group>"; };
 		A604D8492330945F00B1FBB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A604D84C2330945F00B1FBB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A604D84E2330945F00B1FBB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +54,9 @@
 		A7808E9EDA2CBC271BE1F28E /* Pods_VideoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA18780B7E7D05539AEFE5C4 /* Pods-VideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		D24D79C6239FCEA700BCC941 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		D24D79CD239FD49F00BCC941 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
+		D24D79CE239FD49F00BCC941 /* MoviesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesTableViewCell.xib; sourceTree = "<group>"; };
+		D25BF7D7239FD7160001E662 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +65,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A033FB0734979119D25FE7 /* Pods_VideoPlayer.framework in Frameworks */,
+				A5615E4A23A0C1A000907091 /* Alamofire.framework in Frameworks */,
+				A5615E4523A0BB4600907091 /* Alamofire.framework in Frameworks */,
+				A5615E4D23A0C1F400907091 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +96,8 @@
 		527B46416F7BF13A08AC102B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5615E4323A0BB4600907091 /* Alamofire.framework */,
+				A5615E4423A0BB4600907091 /* AlamofireImage.framework */,
 				A7808E9EDA2CBC271BE1F28E /* Pods_VideoPlayer.framework */,
 				8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */,
 			);
@@ -141,7 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				A604D8422330945C00B1FBB6 /* AppDelegate.swift */,
-				A604D8442330945C00B1FBB6 /* ViewController.swift */,
+				D25BF7D6239FD6FF0001E662 /* ViewModel */,
+				D24D79CB239FD45100BCC941 /* ViewController */,
+				D24D79CC239FD46000BCC941 /* View */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -149,10 +167,35 @@
 		D24D79C8239FCEB500BCC941 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				A604D8462330945C00B1FBB6 /* Main.storyboard */,
+				A604D8462330945C00B1FBB6 /* List.storyboard */,
 				A604D84B2330945F00B1FBB6 /* LaunchScreen.storyboard */,
 			);
 			path = storyboard;
+			sourceTree = "<group>";
+		};
+		D24D79CB239FD45100BCC941 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A604D8442330945C00B1FBB6 /* ListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D24D79CC239FD46000BCC941 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D24D79CD239FD49F00BCC941 /* MoviesTableViewCell.swift */,
+				D24D79CE239FD49F00BCC941 /* MoviesTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D25BF7D6239FD6FF0001E662 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D25BF7D7239FD7160001E662 /* ListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +213,7 @@
 				A604D83C2330945C00B1FBB6 /* Frameworks */,
 				A604D83D2330945C00B1FBB6 /* Resources */,
 				A4F88F5F30B705B42BD1EC48 /* [CP] Embed Pods Frameworks */,
+				A5615E4223A0BB1300907091 /* carthage */,
 			);
 			buildRules = (
 			);
@@ -244,7 +288,8 @@
 			files = (
 				A604D84D2330945F00B1FBB6 /* LaunchScreen.storyboard in Resources */,
 				A604D84A2330945F00B1FBB6 /* Assets.xcassets in Resources */,
-				A604D8482330945C00B1FBB6 /* Main.storyboard in Resources */,
+				D24D79D0239FD49F00BCC941 /* MoviesTableViewCell.xib in Resources */,
+				A604D8482330945C00B1FBB6 /* List.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +341,26 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A5615E4223A0BB1300907091 /* carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+			);
+			name = carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		D24D79C2239FCD5A00BCC941 /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -383,8 +448,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A604D8452330945C00B1FBB6 /* ViewController.swift in Sources */,
+				D25BF7D8239FD7160001E662 /* ListViewModel.swift in Sources */,
+				A604D8452330945C00B1FBB6 /* ListViewController.swift in Sources */,
 				A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */,
+				D24D79CF239FD49F00BCC941 /* MoviesTableViewCell.swift in Sources */,
 				D24D79C7239FCEA700BCC941 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,12 +475,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A604D8462330945C00B1FBB6 /* Main.storyboard */ = {
+		A604D8462330945C00B1FBB6 /* List.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A604D8472330945C00B1FBB6 /* Base */,
 			);
-			name = Main.storyboard;
+			name = List.storyboard;
 			sourceTree = "<group>";
 		};
 		A604D84B2330945F00B1FBB6 /* LaunchScreen.storyboard */ = {
@@ -551,6 +618,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JMCJCA8J2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -572,6 +643,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JMCJCA8J2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
