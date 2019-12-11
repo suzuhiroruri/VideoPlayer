@@ -41,9 +41,10 @@ extension ListViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let groupTopCell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MoviesTableViewCell else {
+    guard let movieCell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MoviesTableViewCell else {
       return UITableViewCell()
     }
-    return groupTopCell
+    movieCell.configureCell()
+    return movieCell
   }
 }

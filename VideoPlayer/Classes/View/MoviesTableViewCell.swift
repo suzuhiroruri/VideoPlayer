@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MoviesTableViewCell: UITableViewCell {
 
@@ -17,6 +18,16 @@ class MoviesTableViewCell: UITableViewCell {
 
   override func awakeFromNib() {
     super.awakeFromNib()
+  }
+
+  func configureCell() {
+    titleLabel.text = "G12 Chemistry"
+    descriptionLabel.text = "90 seconds exercise for Chemistry"
+    presenterNameLabel.text = "Kaoru Sakata"
+    guard let url = URL(string: "https://quipper.github.io/native-technical-exam/images/sakata.jpg") else {
+      return
+    }
+    thumbnailView.af_setImage(withURL: url)
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {
