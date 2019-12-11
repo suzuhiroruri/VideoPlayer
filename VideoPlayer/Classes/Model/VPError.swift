@@ -11,4 +11,5 @@ import Foundation
 enum VPError: Error {
   case success
   case apiDataNotFound
+  case apiServerUnknownError
 }
