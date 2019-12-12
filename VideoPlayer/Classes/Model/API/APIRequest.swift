@@ -16,17 +16,14 @@ enum VPAPIResponse<T> {
 }
 
 extension APIModel {
-  func sendGetJSONRequest(hostName: String = Bundle.ServerString(key: .appApiHost),
-                          apiName: String,
-                          completion completionBlock: @escaping (VPAPIResponse<JSON>) -> Void = {_ in}) {
-
-    let host: String = hostName
-
+  internal func sendGetJSONRequest(hostName: String = Bundle.ServerString(key: .appApiHost),
+                                   apiName: String,
+                                   completion completionBlock: @escaping (VPAPIResponse<JSON>) -> Void = {_ in}) {
     // HTTP request
     let protcolName: String = "https"
-    guard let url = URL(string: String(format: "%@://%@/%@?%@",
+    guard let url = URL(string: String(format: "%@://%@/%@",
                                        protcolName,
-                                       host,
+                                       hostName,
                                        apiName)) else {
       return
     }
