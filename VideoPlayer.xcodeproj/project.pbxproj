@@ -20,6 +20,7 @@
 		A5615E6123A205A200907091 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6023A205A200907091 /* UITableView+.swift */; };
 		A5615E6323A2060900907091 /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6223A2060900907091 /* ClassNameProtocol.swift */; };
 		A5615E6523A208AD00907091 /* VideoListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6423A208AD00907091 /* VideoListAPI.swift */; };
+		A5615E6723A2198D00907091 /* VideoEntityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6623A2198D00907091 /* VideoEntityFactory.swift */; };
 		A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8422330945C00B1FBB6 /* AppDelegate.swift */; };
 		A604D8452330945C00B1FBB6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8442330945C00B1FBB6 /* ListViewController.swift */; };
 		A604D8482330945C00B1FBB6 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A604D8462330945C00B1FBB6 /* List.storyboard */; };
@@ -59,6 +60,7 @@
 		A5615E6023A205A200907091 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		A5615E6223A2060900907091 /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
 		A5615E6423A208AD00907091 /* VideoListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListAPI.swift; sourceTree = "<group>"; };
+		A5615E6623A2198D00907091 /* VideoEntityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntityFactory.swift; sourceTree = "<group>"; };
 		A604D83F2330945C00B1FBB6 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A604D8422330945C00B1FBB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A604D8442330945C00B1FBB6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				A5615E5123A0E2BE00907091 /* VideoEntity.swift */,
+				A5615E6623A2198D00907091 /* VideoEntityFactory.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				A5615E5623A0E5D800907091 /* APIModel.swift in Sources */,
 				A5615E6123A205A200907091 /* UITableView+.swift in Sources */,
 				A5615E5223A0E2BE00907091 /* VideoEntity.swift in Sources */,
+				A5615E6723A2198D00907091 /* VideoEntityFactory.swift in Sources */,
 				D25BF7D8239FD7160001E662 /* ListViewModel.swift in Sources */,
 				A604D8452330945C00B1FBB6 /* ListViewController.swift in Sources */,
 				A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */,
