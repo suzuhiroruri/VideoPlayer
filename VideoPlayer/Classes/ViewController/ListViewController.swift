@@ -58,14 +58,15 @@ extension ListViewController: UITableViewDelegate {
 
 extension ListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return viewModel.videoEntityArray.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let movieCell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MoviesTableViewCell else {
       return UITableViewCell()
     }
-    movieCell.configureCell()
+    let videoEntity: VideoEntity = viewModel.videoEntityArray[indexPath.row]
+    movieCell.configureCell(videoEntity: videoEntity)
     return movieCell
   }
 }
