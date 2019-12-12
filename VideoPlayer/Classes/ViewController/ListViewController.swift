@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class ListViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
+  private var activityIndicatorView: NVActivityIndicatorView!
 
   private let viewModel = ListViewModel()
 
@@ -30,6 +32,14 @@ class ListViewController: UIViewController {
 
     tableView.tableFooterView = UIView()
 
+    // indicator setting
+    activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50),
+                                                    type: NVActivityIndicatorType.lineScale,
+                                                    color: UIColor.black, padding: 0)
+    activityIndicatorView.center = self.view.center
+    view.addSubview(activityIndicatorView)
+
+    startIndicator()
     viewModel.loadNew(completion: { [weak self] response in
       guard let self = self else {
         return
@@ -38,15 +48,35 @@ class ListViewController: UIViewController {
       case true:
         DispatchQueue.main.async {
           self.tableView.reloadData()
+          self.stopIndicator()
         }
+
       case false:
-        break
+        self.stopIndicator()
       }
     })
   }
 
   private func register() {
     tableView.register(R.nib.moviesTableViewCell(), forCellReuseIdentifier: "MovieCell")
+  }
+
+  private func startIndicator() {
+    DispatchQueue.main.async { [weak self] in
+      guard let self = self else {
+        return
+      }
+      self.activityIndicatorView.startAnimating()
+    }
+  }
+
+  private func stopIndicator() {
+    DispatchQueue.main.async { [weak self] in
+      guard let self = self else {
+        return
+      }
+      self.activityIndicatorView.stopAnimating()
+    }
   }
 }
 
