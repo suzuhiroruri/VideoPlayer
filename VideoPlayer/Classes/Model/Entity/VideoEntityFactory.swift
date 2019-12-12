@@ -16,12 +16,41 @@ final class VideoEntityFactory {
   private init() {}
 
   private func createFromJSONObject(json: JSON) -> VideoEntity? {
-    return VideoEntity(title: "",
-                       presenterName: "",
-                       description: "",
-                       thumbnailUrl: nil,
-                       videoUrl: nil,
-                       videoDuration: 0)
+    var title: String = ""
+    if let jsonTitle =  json["title"].string {
+      title = jsonTitle
+    }
+
+    var presenterName: String = ""
+    if let jsonPresenterName =  json["presenter_name"].string {
+      presenterName = jsonPresenterName
+    }
+
+    var description: String = ""
+    if let jsonDescription =  json["description"].string {
+      description = jsonDescription
+    }
+
+    var thumbnailUrl: URL?
+    if let jsonThumbnailUrl =  json["thumbnail_url"].url {
+      thumbnailUrl = jsonThumbnailUrl
+    }
+
+    var videoUrl: URL?
+    if let jsonVideoUrl =  json["video_url"].url {
+      videoUrl = jsonVideoUrl
+    }
+
+    var videoDuration: Int = 0
+    if let jsonVideoDuration =  json["video_duration"].int {
+      videoDuration = jsonVideoDuration
+    }
+    return VideoEntity(title: title,
+                       presenterName: presenterName,
+                       description: description,
+                       thumbnailUrl: thumbnailUrl,
+                       videoUrl: videoUrl,
+                       videoDuration: videoDuration)
   }
 
   func createArrayFromJSONObject(json: JSON) -> [VideoEntity] {
