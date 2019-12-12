@@ -15,14 +15,14 @@ class ListViewModel {
   let requestAPIModel =  APIModel()
   var videoEntityArray = [VideoEntity]()
 
-  func loadNew() {
+  func loadNew(completion completionBlock: @escaping (Bool) -> Void) {
     requestAPIModel.videoListAPI(completion: { response in
       switch response {
       case .success(let json):
         self.videoEntityArray = VideoEntityFactory.sharedInstance.createArrayFromJSONObject(json: json)
-
+        completionBlock(true)
       case .error:
-        return
+        completionBlock(false)
       }
     })
   }
