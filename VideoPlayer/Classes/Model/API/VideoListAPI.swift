@@ -12,11 +12,7 @@ import SwiftyJSON
 extension APIModel {
   func videoListAPI(completion completionBlock: @escaping (VPAPIResponse<JSON>) -> Void) {
     let apiName = APIName.playlist.rawValue
-    sendGetJSONRequest(apiName: apiName, completion: {[weak self] response in
-      guard self != nil else {
-        completionBlock(.error(VPError.apiUnkownError))
-        return
-      }
+    sendGetJSONRequest(apiName: apiName, completion: { response in
       switch response {
       case .success(let json):
         completionBlock(.success(json))
