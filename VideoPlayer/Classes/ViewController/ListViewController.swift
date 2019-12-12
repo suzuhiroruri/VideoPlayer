@@ -58,7 +58,7 @@ class ListViewController: UIViewController {
   }
 
   private func register() {
-    tableView.register(R.nib.moviesTableViewCell(), forCellReuseIdentifier: "MovieCell")
+    tableView.register(cellType: MoviesTableViewCell.self)
   }
 
   private func startIndicator() {
@@ -92,9 +92,7 @@ extension ListViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let movieCell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MoviesTableViewCell else {
-      return UITableViewCell()
-    }
+    let movieCell = tableView.dequeueReusableCell(with: MoviesTableViewCell.self, for: indexPath)
     let videoEntity: VideoEntity = viewModel.videoEntityArray[indexPath.row]
     movieCell.configureCell(videoEntity: videoEntity)
     return movieCell
