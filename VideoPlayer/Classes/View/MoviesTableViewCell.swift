@@ -20,14 +20,14 @@ class MoviesTableViewCell: UITableViewCell {
     super.awakeFromNib()
   }
 
-  func configureCell() {
-    titleLabel.text = "G12 Chemistry"
-    descriptionLabel.text = "90 seconds exercise for Chemistry"
-    presenterNameLabel.text = "Kaoru Sakata"
-    guard let url = URL(string: "https://quipper.github.io/native-technical-exam/images/sakata.jpg") else {
+  func configureCell(videoEntity: VideoEntity) {
+    titleLabel.text = videoEntity.title
+    descriptionLabel.text = videoEntity.description
+    presenterNameLabel.text = videoEntity.presenterName
+    guard let thumbnailUrl = videoEntity.thumbnailUrl else {
       return
     }
-    thumbnailView.af_setImage(withURL: url)
+    thumbnailView.af_setImage(withURL: thumbnailUrl)
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {
