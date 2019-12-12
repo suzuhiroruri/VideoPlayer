@@ -7,10 +7,25 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 class ListViewModel {
 
   let requestAPIModel =  APIModel()
 
-  func loadNew() {}
+  func loadNew() {
+    requestAPIModel.videoListAPI(completion: { response in
+      switch response {
+      case .success(let json):
+        print("\n",
+              "json",
+              "\n",
+              json
+        )
+      case .error:
+        return
+      }
+    })
+  }
 }
