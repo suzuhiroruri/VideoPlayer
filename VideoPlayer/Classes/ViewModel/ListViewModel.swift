@@ -13,16 +13,14 @@ import SwiftyJSON
 class ListViewModel {
 
   let requestAPIModel =  APIModel()
+  var videoEntityArray = [VideoEntity]()
 
   func loadNew() {
     requestAPIModel.videoListAPI(completion: { response in
       switch response {
       case .success(let json):
-        print("\n",
-              "json",
-              "\n",
-              json
-        )
+        self.videoEntityArray = VideoEntityFactory.sharedInstance.createArrayFromJSONObject(json: json)
+
       case .error:
         return
       }

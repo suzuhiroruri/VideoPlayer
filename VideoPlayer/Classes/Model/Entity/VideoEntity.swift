@@ -7,22 +7,13 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class VideoEntity {
-  var title: String = ""
-  var presenterName: String = ""
-  var description: String = ""
-  var thumbnailUrl: URL?
-  var videoUrl: URL?
-  var videoDuration: Int = 0
-
-  init() {
-    if let thumbnailUrl = URL(string: "") {
-      self.thumbnailUrl = thumbnailUrl
-    }
-
-    if let videoUrl = URL(string: "") {
-      self.videoUrl = videoUrl
-    }
-  }
+struct VideoEntity {
+  let title: String
+  let presenterName: String
+  let description: String
+  let thumbnailUrl: URL?
+  let videoUrl: URL?
+  let videoDuration: Int
 }
