@@ -15,10 +15,6 @@ extension UITableView {
     register(nib, forCellReuseIdentifier: className)
   }
 
-  public func register(cellTypes: [UITableViewCell.Type], bundle: Bundle? = nil) {
-    cellTypes.forEach { register(cellType: $0, bundle: bundle) }
-  }
-
   public func dequeueReusableCell<T: UITableViewCell>(with type: T.Type, for indexPath: IndexPath) -> T {
     dequeueReusableCell(withIdentifier: type.className, for: indexPath) as! T
   }
