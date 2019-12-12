@@ -21,7 +21,19 @@ class ListViewController: UIViewController {
 
     tableView.tableFooterView = UIView()
 
-    viewModel.loadNew()
+    viewModel.loadNew(completion: { [weak self] response in
+      guard let self = self else {
+        return
+      }
+      switch response {
+      case true:
+        DispatchQueue.main.async {
+          self.tableView.reloadData()
+        }
+      case false:
+        break
+      }
+    })
   }
 
   private func register() {
