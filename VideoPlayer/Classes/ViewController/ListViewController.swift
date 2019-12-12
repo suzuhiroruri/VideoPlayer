@@ -15,6 +15,15 @@ class ListViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 2, height: 5))
+    imageView.contentMode = .scaleAspectFit
+    guard let logo = R.image.logo() else {
+      return
+    }
+    imageView.image = logo
+    self.navigationItem.titleView = imageView
+
     register()
     tableView.delegate = self
     tableView.dataSource = self

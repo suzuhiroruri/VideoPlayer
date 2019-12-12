@@ -2,6 +2,7 @@
 excluded:
 - Pods
 - Carthage
+- VideoPlayer/Resources/R.generated.swift
 
 opt_in_rules:
 - closing_brace
