@@ -16,7 +16,6 @@ enum VPAPIResponse<T> {
 }
 
 extension APIModel {
-
   func sendGetJSONRequest(hostName: String = Bundle.ServerString(key: .appApiHost),
                           apiName: String,
                           completion completionBlock: @escaping (VPAPIResponse<JSON>) -> Void = {_ in}) {

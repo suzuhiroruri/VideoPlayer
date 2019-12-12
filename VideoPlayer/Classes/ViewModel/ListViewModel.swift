@@ -9,5 +9,8 @@
 import Foundation
 
 class ListViewModel {
+
+  let requestAPIModel =  APIModel()
+
   func loadNew() {}
 }
