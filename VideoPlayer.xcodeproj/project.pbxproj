@@ -11,6 +11,16 @@
 		A5615E4523A0BB4600907091 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
 		A5615E4A23A0C1A000907091 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
 		A5615E4D23A0C1F400907091 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4423A0BB4600907091 /* AlamofireImage.framework */; };
+		A5615E5223A0E2BE00907091 /* VideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5123A0E2BE00907091 /* VideoEntity.swift */; };
+		A5615E5623A0E5D800907091 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5523A0E5D800907091 /* APIModel.swift */; };
+		A5615E5823A0E73000907091 /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5723A0E73000907091 /* Bundle+.swift */; };
+		A5615E5A23A0E90100907091 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5923A0E90100907091 /* APIRequest.swift */; };
+		A5615E5C23A0EBFF00907091 /* VPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5B23A0EBFF00907091 /* VPError.swift */; };
+		A5615E5E23A0EDA300907091 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E5D23A0EDA300907091 /* SwiftyJSON.framework */; };
+		A5615E6123A205A200907091 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6023A205A200907091 /* UITableView+.swift */; };
+		A5615E6323A2060900907091 /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6223A2060900907091 /* ClassNameProtocol.swift */; };
+		A5615E6523A208AD00907091 /* VideoListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6423A208AD00907091 /* VideoListAPI.swift */; };
+		A5615E6723A2198D00907091 /* VideoEntityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6623A2198D00907091 /* VideoEntityFactory.swift */; };
 		A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8422330945C00B1FBB6 /* AppDelegate.swift */; };
 		A604D8452330945C00B1FBB6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8442330945C00B1FBB6 /* ListViewController.swift */; };
 		A604D8482330945C00B1FBB6 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A604D8462330945C00B1FBB6 /* List.storyboard */; };
@@ -41,6 +51,16 @@
 		8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5615E4323A0BB4600907091 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		A5615E4423A0BB4600907091 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		A5615E5123A0E2BE00907091 /* VideoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntity.swift; sourceTree = "<group>"; };
+		A5615E5523A0E5D800907091 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		A5615E5723A0E73000907091 /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
+		A5615E5923A0E90100907091 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		A5615E5B23A0EBFF00907091 /* VPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPError.swift; sourceTree = "<group>"; };
+		A5615E5D23A0EDA300907091 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		A5615E6023A205A200907091 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		A5615E6223A2060900907091 /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
+		A5615E6423A208AD00907091 /* VideoListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListAPI.swift; sourceTree = "<group>"; };
+		A5615E6623A2198D00907091 /* VideoEntityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntityFactory.swift; sourceTree = "<group>"; };
 		A604D83F2330945C00B1FBB6 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A604D8422330945C00B1FBB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A604D8442330945C00B1FBB6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5615E5E23A0EDA300907091 /* SwiftyJSON.framework in Frameworks */,
 				88A033FB0734979119D25FE7 /* Pods_VideoPlayer.framework in Frameworks */,
 				A5615E4A23A0C1A000907091 /* Alamofire.framework in Frameworks */,
 				A5615E4523A0BB4600907091 /* Alamofire.framework in Frameworks */,
@@ -96,12 +117,52 @@
 		527B46416F7BF13A08AC102B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5615E5D23A0EDA300907091 /* SwiftyJSON.framework */,
 				A5615E4323A0BB4600907091 /* Alamofire.framework */,
 				A5615E4423A0BB4600907091 /* AlamofireImage.framework */,
 				A7808E9EDA2CBC271BE1F28E /* Pods_VideoPlayer.framework */,
 				8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5615E5023A0E25300907091 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5615E5423A0E5C400907091 /* API */,
+				A5615E5323A0E57100907091 /* Entity */,
+				A5615E5B23A0EBFF00907091 /* VPError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A5615E5323A0E57100907091 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A5615E5123A0E2BE00907091 /* VideoEntity.swift */,
+				A5615E6623A2198D00907091 /* VideoEntityFactory.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A5615E5423A0E5C400907091 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A5615E5523A0E5D800907091 /* APIModel.swift */,
+				A5615E5923A0E90100907091 /* APIRequest.swift */,
+				A5615E6423A208AD00907091 /* VideoListAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A5615E5F23A2057000907091 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A5615E5723A0E73000907091 /* Bundle+.swift */,
+				A5615E6023A205A200907091 /* UITableView+.swift */,
+				A5615E6223A2060900907091 /* ClassNameProtocol.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		A604D8362330945C00B1FBB6 = {
@@ -156,7 +217,9 @@
 		D24D79C5239FCE8500BCC941 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5615E5F23A2057000907091 /* Extension */,
 				A604D8422330945C00B1FBB6 /* AppDelegate.swift */,
+				A5615E5023A0E25300907091 /* Model */,
 				D25BF7D6239FD6FF0001E662 /* ViewModel */,
 				D24D79CB239FD45100BCC941 /* ViewController */,
 				D24D79CC239FD46000BCC941 /* View */,
@@ -352,6 +415,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			name = carthage;
 			outputFileListPaths = (
@@ -448,10 +512,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5615E5C23A0EBFF00907091 /* VPError.swift in Sources */,
+				A5615E6323A2060900907091 /* ClassNameProtocol.swift in Sources */,
+				A5615E5623A0E5D800907091 /* APIModel.swift in Sources */,
+				A5615E6123A205A200907091 /* UITableView+.swift in Sources */,
+				A5615E5223A0E2BE00907091 /* VideoEntity.swift in Sources */,
+				A5615E6723A2198D00907091 /* VideoEntityFactory.swift in Sources */,
 				D25BF7D8239FD7160001E662 /* ListViewModel.swift in Sources */,
 				A604D8452330945C00B1FBB6 /* ListViewController.swift in Sources */,
 				A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */,
+				A5615E5823A0E73000907091 /* Bundle+.swift in Sources */,
 				D24D79CF239FD49F00BCC941 /* MoviesTableViewCell.swift in Sources */,
+				A5615E6523A208AD00907091 /* VideoListAPI.swift in Sources */,
+				A5615E5A23A0E90100907091 /* APIRequest.swift in Sources */,
 				D24D79C7239FCEA700BCC941 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

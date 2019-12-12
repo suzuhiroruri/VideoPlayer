@@ -7,8 +7,23 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 class ListViewModel {
 
-  func loadNew() {}
+  let requestAPIModel =  APIModel()
+  var videoEntityArray = [VideoEntity]()
+
+  func loadNew(completion completionBlock: @escaping (Bool) -> Void) {
+    requestAPIModel.videoListAPI(completion: { response in
+      switch response {
+      case .success(let json):
+        self.videoEntityArray = VideoEntityFactory.sharedInstance.createArrayFromJSONObject(json: json)
+        completionBlock(true)
+      case .error:
+        completionBlock(false)
+      }
+    })
+  }
 }
