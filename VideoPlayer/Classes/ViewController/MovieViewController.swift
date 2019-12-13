@@ -11,14 +11,17 @@ import AVKit
 class MovieViewController: UIViewController {
 
   @IBOutlet weak var playerView: PlayerView!
-  var movieURL: URL?
+  var videoEntity: VideoEntity?
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    guard let movieURL = movieURL else {
+
+    guard let videoEntity = videoEntity,
+      let videoURL = videoEntity.videoUrl else {
       return
     }
-    let asset = AVAsset(url: movieURL)
+    self.title = videoEntity.title
+    let asset = AVAsset(url: videoURL)
     let playerItem = AVPlayerItem(asset: asset)
 
     let player = AVPlayer(playerItem: playerItem)
