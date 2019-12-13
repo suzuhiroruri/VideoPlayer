@@ -11,6 +11,8 @@ import AlamofireImage
 
 class MoviesTableViewCell: UITableViewCell {
 
+  static let cellHeight: CGFloat = 100
+
   @IBOutlet weak var thumbnailView: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!

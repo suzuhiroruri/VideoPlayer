@@ -78,11 +78,28 @@ class ListViewController: UIViewController {
       self.activityIndicatorView.stopAnimating()
     }
   }
+
+  fileprivate func playMovieFromUrl(movieURL: URL) {
+    guard let navigationController = R.storyboard.movie().instantiateInitialViewController() as? UINavigationController,
+      let movieController = navigationController.children.first as? MovieViewController else {
+      return
+    }
+    movieController.movieURL = movieURL
+    present(navigationController, animated: true, completion: nil)
+  }
 }
 
 extension ListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 100
+    return MoviesTableViewCell.cellHeight
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let videoEntity: VideoEntity = viewModel.videoEntityArray[indexPath.row]
+    guard let videoURL = videoEntity.videoUrl else {
+      return
+    }
+    playMovieFromUrl(movieURL: videoURL)
   }
 }
 
