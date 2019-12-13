@@ -35,7 +35,7 @@ class ListViewController: UIViewController {
     // indicator setting
     activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50),
                                                     type: NVActivityIndicatorType.lineScale,
-                                                    color: UIColor.black, padding: 0)
+                                                    color: UIColor.quipperBlueColor(), padding: 0)
     activityIndicatorView.center = self.view.center
     view.addSubview(activityIndicatorView)
 
