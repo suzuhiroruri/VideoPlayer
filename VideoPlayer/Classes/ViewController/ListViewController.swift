@@ -57,6 +57,14 @@ class ListViewController: UIViewController {
     })
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    if let selectedIndexPath = tableView.indexPathForSelectedRow {
+      tableView.deselectRow(at: selectedIndexPath, animated: animated)
+    }
+    UIDevice.current.setValuesForKeys(["orientation": UIInterfaceOrientation.portrait.rawValue])
+  }
+
   private func register() {
     tableView.register(cellType: MoviesTableViewCell.self)
   }
@@ -79,14 +87,7 @@ class ListViewController: UIViewController {
     }
   }
 
-  fileprivate func playMovieFromUrl(movieURL: URL) {
-    guard let navigationController = R.storyboard.movie().instantiateInitialViewController() as? UINavigationController,
-      let movieController = navigationController.children.first as? MovieViewController else {
-      return
-    }
-    movieController.movieURL = movieURL
-    present(navigationController, animated: true, completion: nil)
-  }
+  fileprivate func playMovieFromUrl(movieURL: URL) {}
 }
 
 extension ListViewController: UITableViewDelegate {
@@ -96,10 +97,13 @@ extension ListViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let videoEntity: VideoEntity = viewModel.videoEntityArray[indexPath.row]
-    guard let videoURL = videoEntity.videoUrl else {
+    guard let navigationController = R.storyboard.movie().instantiateInitialViewController() as? UINavigationController,
+      let movieController = navigationController.children.first as? MovieViewController else {
       return
     }
-    playMovieFromUrl(movieURL: videoURL)
+    movieController.videoEntity = videoEntity
+    navigationController.modalPresentationStyle = .fullScreen
+    present(navigationController, animated: true, completion: nil)
   }
 }
 
