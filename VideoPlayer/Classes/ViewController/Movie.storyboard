@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-129" y="422"/>
         </scene>
-        <!--Movie View Controller-->
+        <!--Title-->
         <scene sceneID="AFJ-fw-MGM">
             <objects>
                 <viewController id="xKI-2C-Hpk" customClass="MovieViewController" customModule="VideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bka-z2-ruc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jDh-x2-bsD"/>
+                    <navigationItem key="navigationItem" title="Title" id="f1g-0Q-7fk">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="BIj-dc-qez">
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="tapCloseButton:" destination="xKI-2C-Hpk" id="fCg-oU-A3s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="playerView" destination="IBP-U3-fYo" id="Atw-mL-0La"/>
                     </connections>

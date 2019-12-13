@@ -25,4 +25,8 @@ class MovieViewController: UIViewController {
     playerView.player = player
     player.play()
   }
+
+  @IBAction func tapCloseButton(_ sender: UIBarButtonItem) {
+    dismiss(animated: true, completion: nil)
+  }
 }
