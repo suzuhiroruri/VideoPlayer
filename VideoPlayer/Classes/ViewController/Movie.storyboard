@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RpC-vZ-KCI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="50I-o4-1Ws">
+            <objects>
+                <navigationController id="RpC-vZ-KCI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qtf-ky-xqq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xKI-2C-Hpk" kind="relationship" relationship="rootViewController" id="mI2-Ax-WTu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JWH-Mn-uqZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129" y="422"/>
+        </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="AFJ-fw-MGM">
+            <objects>
+                <viewController id="xKI-2C-Hpk" customClass="MovieViewController" customModule="VideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MjN-PD-5w4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBP-U3-fYo" customClass="PlayerView" customModule="VideoPlayer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IBP-U3-fYo" firstAttribute="top" secondItem="bka-z2-ruc" secondAttribute="top" id="3PV-h7-E8X"/>
+                            <constraint firstItem="bka-z2-ruc" firstAttribute="trailing" secondItem="IBP-U3-fYo" secondAttribute="trailing" id="N5q-5p-S2Z"/>
+                            <constraint firstItem="IBP-U3-fYo" firstAttribute="leading" secondItem="bka-z2-ruc" secondAttribute="leading" id="R0O-bs-xcv"/>
+                            <constraint firstItem="bka-z2-ruc" firstAttribute="bottom" secondItem="IBP-U3-fYo" secondAttribute="bottom" id="i4m-Re-Mtf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bka-z2-ruc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jDh-x2-bsD"/>
+                    <connections>
+                        <outlet property="playerView" destination="IBP-U3-fYo" id="Atw-mL-0La"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpN-A1-azO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="422"/>
+        </scene>
+    </scenes>
+</document>
