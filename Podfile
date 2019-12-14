@@ -8,7 +8,7 @@ target 'VideoPlayer' do
   pod 'SwiftLint', ‘0.33.0’
   pod 'SwiftFormat/CLI', ’0.40.10’
   pod 'R.swift'
-  pod "ASPVideoPlayer"
+  pod 'MSPlayer'
 
   # Pods for VideoPlayer
 

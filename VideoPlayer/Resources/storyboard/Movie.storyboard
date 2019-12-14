@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-129" y="422"/>
         </scene>
-        <!--Title-->
+        <!--Eng-->
         <scene sceneID="AFJ-fw-MGM">
             <objects>
                 <viewController id="xKI-2C-Hpk" customClass="MovieViewController" customModule="VideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,31 +32,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBP-U3-fYo" customClass="ASPVideoPlayer" customModule="ASPVideoPlayer">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g7M-sB-ijW">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdV-sV-Aiz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Qks-yN-C8O"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMx-xo-2NK" userLabel="baseView">
+                                        <rect key="frame" x="0.0" y="20" width="414" height="754"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IBP-U3-fYo" firstAttribute="top" secondItem="bka-z2-ruc" secondAttribute="top" id="3PV-h7-E8X"/>
-                            <constraint firstItem="bka-z2-ruc" firstAttribute="trailing" secondItem="IBP-U3-fYo" secondAttribute="trailing" id="N5q-5p-S2Z"/>
-                            <constraint firstItem="IBP-U3-fYo" firstAttribute="leading" secondItem="bka-z2-ruc" secondAttribute="leading" id="R0O-bs-xcv"/>
-                            <constraint firstItem="bka-z2-ruc" firstAttribute="bottom" secondItem="IBP-U3-fYo" secondAttribute="bottom" id="i4m-Re-Mtf"/>
+                            <constraint firstItem="g7M-sB-ijW" firstAttribute="leading" secondItem="bka-z2-ruc" secondAttribute="leading" id="7iy-a5-8hm"/>
+                            <constraint firstItem="g7M-sB-ijW" firstAttribute="top" secondItem="bka-z2-ruc" secondAttribute="top" id="V44-DH-0Hc"/>
+                            <constraint firstItem="bka-z2-ruc" firstAttribute="trailing" secondItem="g7M-sB-ijW" secondAttribute="trailing" id="ZPu-b2-19N"/>
+                            <constraint firstItem="bka-z2-ruc" firstAttribute="bottom" secondItem="g7M-sB-ijW" secondAttribute="bottom" id="zOo-5P-k8S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bka-z2-ruc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="f1g-0Q-7fk">
+                    <navigationItem key="navigationItem" title="Eng" id="f1g-0Q-7fk">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="BIj-dc-qez">
-                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="tapCloseButton:" destination="xKI-2C-Hpk" id="fCg-oU-A3s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="videoPlayer" destination="IBP-U3-fYo" id="UGu-N1-Ycp"/>
+                        <outlet property="baseView" destination="BMx-xo-2NK" id="A4q-7e-OBE"/>
+                        <outlet property="timeDurationLabel" destination="VdV-sV-Aiz" id="t1W-AX-ZJw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpN-A1-azO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
