@@ -1,5 +1,9 @@
 PODS:
-  - ASPVideoPlayer (6.1.0)
+  - MSPlayer (2.2.5):
+    - NVActivityIndicatorView
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
@@ -7,7 +11,7 @@ PODS:
   - SwiftLint (0.33.0)
 
 DEPENDENCIES:
-  - ASPVideoPlayer
+  - MSPlayer
   - R.swift
   - SwiftFormat/CLI (= 0.40.10)
   - SwiftLint (= 0.33.0)
@@ -19,15 +23,17 @@ SPEC REPOS:
     - SwiftFormat
     - SwiftLint
   trunk:
-    - ASPVideoPlayer
+    - MSPlayer
+    - NVActivityIndicatorView
 
 SPEC CHECKSUMS:
-  ASPVideoPlayer: 900b9158d20cd721ed03e0525dac11fc57b892fc
+  MSPlayer: 979d6abf431d01f729fbffd702452b190b301055
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   SwiftFormat: d0e2118da5bfccc0158f0b8eff80c476c5acd984
   SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
-PODFILE CHECKSUM: f66f9d6b0caf75b3a9612b133321bbf7da2e5c81
+PODFILE CHECKSUM: 399a39a78dc7984db70517e5ed46b2b68ebd4ec8
 
 COCOAPODS: 1.8.1
