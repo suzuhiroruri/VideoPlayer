@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import ASPVideoPlayer
+import AVFoundation
 import AVKit
-class MovieViewController: UIViewController {
 
-  @IBOutlet weak var playerView: PlayerView!
+class MovieViewController: UIViewController {
+  @IBOutlet weak var videoPlayer: ASPVideoPlayer!
+  private var player: AVPlayer!
   var videoEntity: VideoEntity?
+
+  var isPlaying = true
+  var isEnding = false
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -21,15 +27,18 @@ class MovieViewController: UIViewController {
       return
     }
     self.title = videoEntity.title
-    let asset = AVAsset(url: videoURL)
-    let playerItem = AVPlayerItem(asset: asset)
-
-    let player = AVPlayer(playerItem: playerItem)
-    playerView.player = player
-    player.play()
+    let asset = AVURLAsset(url: videoURL)
+    videoPlayer.videoAssets = [asset]
+    videoPlayer.delegate = self
   }
 
   @IBAction func tapCloseButton(_ sender: UIBarButtonItem) {
     dismiss(animated: true, completion: nil)
+  }
+}
+
+extension MovieViewController: ASPVideoPlayerViewDelegate {
+  func playingVideo(progress: Double) {
+    print("Playing: \(progress)")
   }
 }
