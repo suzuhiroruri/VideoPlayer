@@ -10,7 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 
 class ListViewController: UIViewController {
-  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet private weak var tableView: UITableView!
   private var activityIndicatorView: NVActivityIndicatorView!
 
   private let viewModel = ListViewModel()
