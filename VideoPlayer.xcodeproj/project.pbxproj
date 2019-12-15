@@ -35,6 +35,7 @@
 		D24D79CF239FD49F00BCC941 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D79CD239FD49F00BCC941 /* MoviesTableViewCell.swift */; };
 		D24D79D0239FD49F00BCC941 /* MoviesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24D79CE239FD49F00BCC941 /* MoviesTableViewCell.xib */; };
 		D25BF7D8239FD7160001E662 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BF7D7239FD7160001E662 /* ListViewModel.swift */; };
+		D2D06D9223A5C80E0096D3D8 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D06D9123A5C80E0096D3D8 /* Hero.framework */; };
 		FBCD80591A8679A4B686D5D6 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		D24D79CD239FD49F00BCC941 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
 		D24D79CE239FD49F00BCC941 /* MoviesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesTableViewCell.xib; sourceTree = "<group>"; };
 		D25BF7D7239FD7160001E662 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		D2D06D9123A5C80E0096D3D8 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D06D9223A5C80E0096D3D8 /* Hero.framework in Frameworks */,
 				A5615E6923A2369D00907091 /* NVActivityIndicatorView.framework in Frameworks */,
 				A5615E5E23A0EDA300907091 /* SwiftyJSON.framework in Frameworks */,
 				88A033FB0734979119D25FE7 /* Pods_VideoPlayer.framework in Frameworks */,
@@ -127,6 +130,7 @@
 		527B46416F7BF13A08AC102B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2D06D9123A5C80E0096D3D8 /* Hero.framework */,
 				A5615E6C23A3669900907091 /* MobilePlayer.framework */,
 				A5615E6823A2369D00907091 /* NVActivityIndicatorView.framework */,
 				A5615E5D23A0EDA300907091 /* SwiftyJSON.framework */,
@@ -433,6 +437,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Hero.framework",
 			);
 			name = carthage;
 			outputFileListPaths = (

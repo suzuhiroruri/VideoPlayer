@@ -10,21 +10,26 @@ import UIKit
 import MSPlayer
 import AVFoundation
 import AVKit
+import Hero
 
 class MovieViewController: UIViewController, UIGestureRecognizerDelegate {
-  @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var timeDurationLabel: UILabel!
+  @IBOutlet private weak var titleLabel: UILabel!
+  @IBOutlet private weak var timeDurationLabel: UILabel!
   @IBOutlet private weak var baseView: UIView!
+  var videoEntity: VideoEntity?
+  var heroId = ""
 
   private lazy var videoPlayer = {
     MSPlayer()
   }()
 
-  var formatter = DateFormatter()
-  var videoEntity: VideoEntity?
+  private var formatter = DateFormatter()
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    self.hero.isEnabled = true
+    baseView.hero.id = heroId
 
     formatter.dateFormat = "mm:ss"
 
