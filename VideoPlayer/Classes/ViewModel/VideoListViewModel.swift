@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class VideoListViewModel {
 
-  let requestAPIModel =  APIModel()
+  private let requestAPIModel =  APIModel()
   var videoEntityArray = [VideoEntity]()
 
   func loadNew(completion completionBlock: @escaping (Bool) -> Void) {

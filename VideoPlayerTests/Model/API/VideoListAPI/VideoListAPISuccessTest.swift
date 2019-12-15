@@ -49,11 +49,10 @@ class VideoListAPISuccessTest: XCTestCase {
             XCTAssertEqual(75000, subJson["video_duration"].intValue)
           }
         }
-        expectation.fulfill()
       case .error:
         fatalError("通信が失敗してます！")
       }
-
+      expectation.fulfill()
     })
     waitForExpectations(timeout: 10) { (error) in
     }

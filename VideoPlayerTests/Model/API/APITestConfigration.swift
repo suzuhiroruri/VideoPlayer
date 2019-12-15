@@ -168,5 +168,6 @@ extension TestStubs {
   enum JsonFileType: String {
     case videoListAPISuccessTest = "VideoListAPISuccessTest"
     case videoListAPISuccessEmptyTest = "VideoListAPISuccessEmptyTest"
+    case videoListViewModelLoadNewSuccessTest = "VideoListViewModelLoadNewSuccessTest"
   }
 }
