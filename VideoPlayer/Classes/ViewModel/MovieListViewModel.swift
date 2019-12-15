@@ -1,5 +1,5 @@
 //
-//  ListViewModel.swift
+//  MovieListViewModel.swift
 //  VideoPlayer
 //
 //  Created by 鈴木 宏昌 on 2019/12/10.
@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class ListViewModel {
+class MovieListViewModel {
 
   let requestAPIModel =  APIModel()
   var videoEntityArray = [VideoEntity]()

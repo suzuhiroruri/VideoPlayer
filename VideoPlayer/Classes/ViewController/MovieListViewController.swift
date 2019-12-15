@@ -1,5 +1,5 @@
 //
-//  ListViewController.swift
+//  MovieListViewController.swift
 //  VideoPlayer
 //
 //  Created by Quipper Ltd. on 9/16/19.
@@ -9,11 +9,11 @@
 import UIKit
 import NVActivityIndicatorView
 
-class ListViewController: UIViewController {
+class MovieListViewController: UIViewController {
   @IBOutlet private weak var tableView: UITableView!
   private var activityIndicatorView: NVActivityIndicatorView!
 
-  private let viewModel = ListViewModel()
+  private let viewModel = MovieListViewModel()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -66,7 +66,7 @@ class ListViewController: UIViewController {
   }
 
   private func register() {
-    tableView.register(cellType: MoviesTableViewCell.self)
+    tableView.register(cellType: MovieTableViewCell.self)
   }
 
   private func startIndicator() {
@@ -90,30 +90,30 @@ class ListViewController: UIViewController {
   fileprivate func playMovieFromUrl(movieURL: URL) {}
 }
 
-extension ListViewController: UITableViewDelegate {
+extension MovieListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-    return MoviesTableViewCell.cellHeight
+    return MovieTableViewCell.cellHeight
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let videoEntity: VideoEntity = viewModel.videoEntityArray[indexPath.row]
-    guard let movieController = R.storyboard.movie().instantiateInitialViewController() as? MovieViewController, let thumbnailUrl = videoEntity.thumbnailUrl else {
+    guard let movieController = R.storyboard.moviePlayer().instantiateInitialViewController() as? MoviePlayerViewController, let thumbnailUrl = videoEntity.thumbnailUrl else {
       return
     }
-    movieController.heroId = "MoviesTableViewCell_thumbnailView" + thumbnailUrl.description
+    movieController.heroId = "MovieTableViewCell_thumbnailView" + thumbnailUrl.description
     movieController.videoEntity = videoEntity
     movieController.modalPresentationStyle = .fullScreen
     present(movieController, animated: true, completion: nil)
   }
 }
 
-extension ListViewController: UITableViewDataSource {
+extension MovieListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return viewModel.videoEntityArray.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let movieCell = tableView.dequeueReusableCell(with: MoviesTableViewCell.self, for: indexPath)
+    let movieCell = tableView.dequeueReusableCell(with: MovieTableViewCell.self, for: indexPath)
     let videoEntity: VideoEntity = viewModel.videoEntityArray[indexPath.row]
     movieCell.configureCell(videoEntity: videoEntity)
     return movieCell
