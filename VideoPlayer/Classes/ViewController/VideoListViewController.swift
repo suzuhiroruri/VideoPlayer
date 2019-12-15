@@ -98,8 +98,8 @@ extension VideoListViewController: UITableViewDelegate {
     guard let videoPlayerController = R.storyboard.videoPlayer().instantiateInitialViewController() as? VideoPlayerViewController, let thumbnailUrl = videoEntity.thumbnailUrl else {
       return
     }
+    videoPlayerController.setupViewModel(videoEntity: videoEntity)
     videoPlayerController.heroId = "VideoTableViewCell_thumbnailView" + thumbnailUrl.description
-    videoPlayerController.videoEntity = videoEntity
     videoPlayerController.modalPresentationStyle = .fullScreen
     present(videoPlayerController, animated: true, completion: nil)
   }
