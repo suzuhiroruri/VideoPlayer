@@ -2,8 +2,8 @@
 //  MovieTableViewCell.swift
 //  VideoPlayer
 //
-//  Created by 鈴木 宏昌 on 2019/12/10.
-//  Copyright © 2019 Quipper Ltd. All rights reserved.
+//  Created by Hiromasa Suzuki on 2019/12/10.
+//  Copyright © 2019 Hiromasa Suzuki All rights reserved.
 //
 
 import UIKit

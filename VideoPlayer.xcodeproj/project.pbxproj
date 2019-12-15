@@ -331,7 +331,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
-				ORGANIZATIONNAME = "Quipper Ltd.";
+				ORGANIZATIONNAME = "Hiromasa Suzuki";
 				TargetAttributes = {
 					A604D83E2330945C00B1FBB6 = {
 						CreatedOnToolsVersion = 10.3;
