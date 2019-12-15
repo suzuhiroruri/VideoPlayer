@@ -1,5 +1,5 @@
 //
-//  MovieListViewController.swift
+//  VideoListViewController.swift
 //  VideoPlayer
 //
 //  Created by Hiromasa Suzuki on 9/16/19.
@@ -9,11 +9,11 @@
 import UIKit
 import NVActivityIndicatorView
 
-class MovieListViewController: UIViewController {
+class VideoListViewController: UIViewController {
   @IBOutlet private weak var tableView: UITableView!
   private var activityIndicatorView: NVActivityIndicatorView!
 
-  private let viewModel = MovieListViewModel()
+  private let viewModel = VideoListViewModel()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -66,7 +66,7 @@ class MovieListViewController: UIViewController {
   }
 
   private func register() {
-    tableView.register(cellType: MovieTableViewCell.self)
+    tableView.register(cellType: VideoTableViewCell.self)
   }
 
   private func startIndicator() {
@@ -86,36 +86,34 @@ class MovieListViewController: UIViewController {
       self.activityIndicatorView.stopAnimating()
     }
   }
-
-  fileprivate func playMovieFromUrl(movieURL: URL) {}
 }
 
-extension MovieListViewController: UITableViewDelegate {
+extension VideoListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-    return MovieTableViewCell.cellHeight
+    return VideoTableViewCell.cellHeight
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let videoEntity: VideoEntity = viewModel.videoEntityArray[indexPath.row]
-    guard let movieController = R.storyboard.moviePlayer().instantiateInitialViewController() as? MoviePlayerViewController, let thumbnailUrl = videoEntity.thumbnailUrl else {
+    guard let videoPlayerController = R.storyboard.videoPlayer().instantiateInitialViewController() as? VideoPlayerViewController, let thumbnailUrl = videoEntity.thumbnailUrl else {
       return
     }
-    movieController.heroId = "MovieTableViewCell_thumbnailView" + thumbnailUrl.description
-    movieController.videoEntity = videoEntity
-    movieController.modalPresentationStyle = .fullScreen
-    present(movieController, animated: true, completion: nil)
+    videoPlayerController.setupViewModel(videoEntity: videoEntity)
+    videoPlayerController.heroId = "VideoTableViewCell_thumbnailView" + thumbnailUrl.description
+    videoPlayerController.modalPresentationStyle = .fullScreen
+    present(videoPlayerController, animated: true, completion: nil)
   }
 }
 
-extension MovieListViewController: UITableViewDataSource {
+extension VideoListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return viewModel.videoEntityArray.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let movieCell = tableView.dequeueReusableCell(with: MovieTableViewCell.self, for: indexPath)
+    let videoCell = tableView.dequeueReusableCell(with: VideoTableViewCell.self, for: indexPath)
     let videoEntity: VideoEntity = viewModel.videoEntityArray[indexPath.row]
-    movieCell.configureCell(videoEntity: videoEntity)
-    return movieCell
+    videoCell.configureCell(videoEntity: videoEntity)
+    return videoCell
   }
 }

@@ -1,5 +1,5 @@
 //
-//  MovieTableViewCell.swift
+//  VideoTableViewCell.swift
 //  VideoPlayer
 //
 //  Created by Hiromasa Suzuki on 2019/12/10.
@@ -10,11 +10,11 @@ import UIKit
 import AlamofireImage
 import Hero
 
-class MovieTableViewCell: UITableViewCell {
+class VideoTableViewCell: UITableViewCell {
 
   static let cellHeight: CGFloat = 100
 
-  @IBOutlet private weak var movieTotalTimeLabel: UILabel!
+  @IBOutlet private weak var totalTimeLabel: UILabel!
   @IBOutlet private weak var thumbnailView: UIImageView!
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var descriptionLabel: UILabel!
@@ -34,10 +34,10 @@ class MovieTableViewCell: UITableViewCell {
       return
     }
     thumbnailView.af_setImage(withURL: thumbnailUrl)
-    heroId = "MovieTableViewCell_thumbnailView" + thumbnailUrl.description
+    heroId = "VideoTableViewCell_thumbnailView" + thumbnailUrl.description
     thumbnailView.hero.id = heroId
 
-    movieTotalTimeLabel.text = videoEntity.videoDuration.makeTimeDurationString()
+    totalTimeLabel.text = videoEntity.videoDuration.makeTimeDurationString()
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {
