@@ -50,7 +50,7 @@ class VideoListAPISuccessTest: XCTestCase {
           }
         }
       case .error:
-        fatalError("通信が失敗してます！")
+        fatalError("failure")
       }
       expectation.fulfill()
     })

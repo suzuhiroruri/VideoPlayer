@@ -44,6 +44,7 @@ extension APIModel {
       }
       switch response.result {
       case .success(let data):
+
         guard response.response != nil else {
           completionBlock(.error(.apiServerUnknownError))
           return
