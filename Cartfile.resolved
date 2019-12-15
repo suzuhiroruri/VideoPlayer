@@ -1,4 +1,5 @@
 github "Alamofire/Alamofire" "4.9.1"
 github "Alamofire/AlamofireImage" "3.6.0"
+github "HeroTransitions/Hero" "1.5.0"
 github "SwiftyJSON/SwiftyJSON" "4.3.0"
 github "ninjaprox/NVActivityIndicatorView" "4.8.0"

@@ -10,7 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 
 class ListViewController: UIViewController {
-  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet private weak var tableView: UITableView!
   private var activityIndicatorView: NVActivityIndicatorView!
 
   private let viewModel = ListViewModel()
@@ -97,9 +97,10 @@ extension ListViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let videoEntity: VideoEntity = viewModel.videoEntityArray[indexPath.row]
-    guard let movieController = R.storyboard.movie().instantiateInitialViewController() as? MovieViewController else {
+    guard let movieController = R.storyboard.movie().instantiateInitialViewController() as? MovieViewController, let thumbnailUrl = videoEntity.thumbnailUrl else {
       return
     }
+    movieController.heroId = "MoviesTableViewCell_thumbnailView" + thumbnailUrl.description
     movieController.videoEntity = videoEntity
     movieController.modalPresentationStyle = .fullScreen
     present(movieController, animated: true, completion: nil)
