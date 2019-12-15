@@ -11,6 +11,8 @@ import Foundation
 enum VPError: Error {
   case success
   case apiDataNotFound
-  case apiUnkownError
   case apiServerUnknownError
+  case apiHttpError(status: URLError.Code)
+  case apiInvalidJSON
+  case apiInternetNotConnect
 }

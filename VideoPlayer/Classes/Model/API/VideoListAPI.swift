@@ -16,8 +16,8 @@ extension APIModel {
       switch response {
       case .success(let json):
         completionBlock(.success(json))
-      case .error:
-        completionBlock(.error(VPError.apiUnkownError))
+      case .error(let error):
+        completionBlock(.error(error))
       }
     })
   }
