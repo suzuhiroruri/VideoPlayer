@@ -12,6 +12,7 @@ import AVFoundation
 import AVKit
 
 class MovieViewController: UIViewController, UIGestureRecognizerDelegate {
+  @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var timeDurationLabel: UILabel!
   @IBOutlet private weak var baseView: UIView!
 
@@ -31,7 +32,7 @@ class MovieViewController: UIViewController, UIGestureRecognizerDelegate {
       let videoURL = videoEntity.videoUrl else {
       return
     }
-    self.title = videoEntity.title
+    self.titleLabel.text = videoEntity.title
     MSPlayerConfig.openRecorder = false
     MSPlayerConfig.shouldAutoPlay = true
     MSPlayerConfig.playerPanSeekRate = 0.5
@@ -63,7 +64,7 @@ class MovieViewController: UIViewController, UIGestureRecognizerDelegate {
     videoPlayer.trailingAnchor.constraint(equalTo: self.baseView.trailingAnchor).isActive = true
   }
 
-  @IBAction func tapCloseButton(_ sender: UIBarButtonItem) {
+  @IBAction func tapCloseButton(_ sender: UIButton) {
     dismiss(animated: true, completion: nil)
   }
 }
