@@ -2,8 +2,8 @@
 //  MovieListViewController.swift
 //  VideoPlayer
 //
-//  Created by Quipper Ltd. on 9/16/19.
-//  Copyright © 2019 Quipper Ltd. All rights reserved.
+//  Created by Hiromasa Suzuki on 9/16/19.
+//  Copyright © 2019 Hiromasa Suzuki All rights reserved.
 //
 
 import UIKit
