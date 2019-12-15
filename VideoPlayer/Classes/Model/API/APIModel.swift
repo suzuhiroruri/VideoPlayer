@@ -6,7 +6,6 @@
 //  Copyright © 2019 Hiromasa Suzuki All rights reserved.
 //
 
-import Foundation
 import Alamofire
 
 class APIModel {

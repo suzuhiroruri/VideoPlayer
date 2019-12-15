@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
     if let navigationController = self.window?.rootViewController as? UINavigationController {
-      if navigationController.visibleViewController is MoviePlayerViewController {
+      if navigationController.visibleViewController is VideoPlayerViewController {
         return UIInterfaceOrientationMask.all
       } else {
         return UIInterfaceOrientationMask.portrait

@@ -6,6 +6,7 @@
 //  Copyright © 2019 Hiromasa Suzuki All rights reserved.
 //
 import Foundation
+
 public protocol ClassNameProtocol {
   static var className: String { get }
   var className: String { get }
