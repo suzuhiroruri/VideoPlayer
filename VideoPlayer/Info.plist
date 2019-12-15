@@ -9,7 +9,7 @@
 	<key>Server</key>
 	<dict>
 		<key>AppAPIHost</key>
-		<string>quipper.github.io</string>
+		<string>suzuhiroruri.github.io</string>
 	</dict>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>

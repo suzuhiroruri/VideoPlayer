@@ -9,7 +9,6 @@
 import Alamofire
 
 class APIModel {
-
   var currentRequest: DataRequest?
 
   enum SendServerType {
@@ -27,6 +26,6 @@ class APIModel {
 
   /// API Path
   enum APIName: String {
-    case playlist = "native-technical-exam/playlist.json"
+    case playlist = "/resources/jsons/playlists.json"
   }
 }

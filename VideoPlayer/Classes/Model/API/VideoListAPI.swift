@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  VideoListAPI.swift
 //  VideoPlayer
 //
 //  Created by Hiromasa Suzuki on 2019/12/12.
@@ -16,8 +16,8 @@ extension APIModel {
       switch response {
       case .success(let json):
         completionBlock(.success(json))
-      case .error:
-        completionBlock(.error(VPError.apiUnkownError))
+      case .error(let error):
+        completionBlock(.error(error))
       }
     })
   }

@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  ClassNameProtocol.swift
 //  VideoPlayer
 //
 //  Created by Hiromasa Suzuki on 2019/12/12.

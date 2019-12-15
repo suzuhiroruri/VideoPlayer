@@ -26,6 +26,15 @@ class VideoTableViewCell: UITableViewCell {
     super.awakeFromNib()
   }
 
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    titleLabel.text = nil
+    descriptionLabel.text = nil
+    presenterNameLabel.text = nil
+    totalTimeLabel.text = nil
+    thumbnailView.image = nil
+  }
+
   func configureCell(videoEntity: VideoEntity) {
     titleLabel.text = videoEntity.title
     descriptionLabel.text = videoEntity.description

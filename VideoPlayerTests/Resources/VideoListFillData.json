@@ -1,0 +1,18 @@
+[
+  {
+    "title": "First Title",
+    "presenter_name": "Hiromasa Suzuki",
+    "description": "Let's play dance!",
+    "thumbnail_url": "https://suzuhiroruri.github.io/resources/images/shore.png",
+    "video_url": "https://suzuhiroruri.github.io/resources/videos/shore.mp4",
+    "video_duration": 97000
+  },
+  {
+    "title": "Second Title",
+    "presenter_name": "Masahiro Suzumoto",
+    "description": "This is the best movie!",
+    "thumbnail_url": "https://suzuhiroruri.github.io/resources/images/shore.png",
+    "video_url": "https://suzuhiroruri.github.io/resources/videos/shore.mp4",
+    "video_duration": 75000
+  }
+]

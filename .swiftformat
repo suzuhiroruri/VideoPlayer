@@ -1,5 +1,5 @@
 # exclude files
---exclude Pods, Carthage
+--exclude Pods, Carthage, *.json
 
 # format option
 #--allman false
