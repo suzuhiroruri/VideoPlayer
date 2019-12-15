@@ -3,7 +3,7 @@
 //  VideoPlayer
 //
 //  Created by Hiromasa Suzuki on 2019/12/13.
-//  Copyright © 2019 Quipper Ltd. All rights reserved.
+//  Copyright © 2019 Hiromasa Suzuki All rights reserved.
 //
 
 import UIKit
