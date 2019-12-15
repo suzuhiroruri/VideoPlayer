@@ -29,7 +29,7 @@ extension APIModel {
     var req: URLRequest
     do {
       req = try URLRequest(url: url, method: .get, headers: nil)
-      // req.timeoutInterval = Bundle.timeout()
+      req.timeoutInterval = 10
       req.setValue("text/plain, application/json, text/html", forHTTPHeaderField: "Accept")
     } catch {
       completionBlock(.error(.apiServerUnknownError))
