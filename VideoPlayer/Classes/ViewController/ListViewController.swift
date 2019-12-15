@@ -34,7 +34,7 @@ class ListViewController: UIViewController {
 
     // indicator setting
     activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50),
-                                                    type: NVActivityIndicatorType.lineScale,
+                                                    type: NVActivityIndicatorType.ballRotateChase,
                                                     color: UIColor.quipperBlueColor(), padding: 0)
     activityIndicatorView.center = self.view.center
     view.addSubview(activityIndicatorView)
@@ -55,6 +55,14 @@ class ListViewController: UIViewController {
         self.stopIndicator()
       }
     })
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    if let selectedIndexPath = tableView.indexPathForSelectedRow {
+      tableView.deselectRow(at: selectedIndexPath, animated: animated)
+    }
+    UIDevice.current.setValuesForKeys(["orientation": UIInterfaceOrientation.portrait.rawValue])
   }
 
   private func register() {
@@ -78,11 +86,23 @@ class ListViewController: UIViewController {
       self.activityIndicatorView.stopAnimating()
     }
   }
+
+  fileprivate func playMovieFromUrl(movieURL: URL) {}
 }
 
 extension ListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 100
+    return MoviesTableViewCell.cellHeight
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let videoEntity: VideoEntity = viewModel.videoEntityArray[indexPath.row]
+    guard let movieController = R.storyboard.movie().instantiateInitialViewController() as? MovieViewController else {
+      return
+    }
+    movieController.videoEntity = videoEntity
+    movieController.modalPresentationStyle = .fullScreen
+    present(movieController, animated: true, completion: nil)
   }
 }
 
