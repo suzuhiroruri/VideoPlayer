@@ -23,6 +23,8 @@
 		A5615E6723A2198D00907091 /* VideoEntityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6623A2198D00907091 /* VideoEntityFactory.swift */; };
 		A5615E6923A2369D00907091 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E6823A2369D00907091 /* NVActivityIndicatorView.framework */; };
 		A5615E6B23A35EC300907091 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6A23A35EC300907091 /* UIColor+.swift */; };
+		A5615E7123A38A7800907091 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E7023A38A7800907091 /* MovieViewController.swift */; };
+		A5615E7323A38A8C00907091 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5615E7223A38A8C00907091 /* Movie.storyboard */; };
 		A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8422330945C00B1FBB6 /* AppDelegate.swift */; };
 		A604D8452330945C00B1FBB6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8442330945C00B1FBB6 /* ListViewController.swift */; };
 		A604D8482330945C00B1FBB6 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A604D8462330945C00B1FBB6 /* List.storyboard */; };
@@ -65,6 +67,9 @@
 		A5615E6623A2198D00907091 /* VideoEntityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntityFactory.swift; sourceTree = "<group>"; };
 		A5615E6823A2369D00907091 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		A5615E6A23A35EC300907091 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		A5615E6C23A3669900907091 /* MobilePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobilePlayer.framework; path = Carthage/Build/iOS/MobilePlayer.framework; sourceTree = "<group>"; };
+		A5615E7023A38A7800907091 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		A5615E7223A38A8C00907091 /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		A604D83F2330945C00B1FBB6 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A604D8422330945C00B1FBB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A604D8442330945C00B1FBB6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +127,7 @@
 		527B46416F7BF13A08AC102B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5615E6C23A3669900907091 /* MobilePlayer.framework */,
 				A5615E6823A2369D00907091 /* NVActivityIndicatorView.framework */,
 				A5615E5D23A0EDA300907091 /* SwiftyJSON.framework */,
 				A5615E4323A0BB4600907091 /* Alamofire.framework */,
@@ -238,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				A604D8462330945C00B1FBB6 /* List.storyboard */,
+				A5615E7223A38A8C00907091 /* Movie.storyboard */,
 				A604D84B2330945F00B1FBB6 /* LaunchScreen.storyboard */,
 			);
 			path = storyboard;
@@ -247,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				A604D8442330945C00B1FBB6 /* ListViewController.swift */,
+				A5615E7023A38A7800907091 /* MovieViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -356,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5615E7323A38A8C00907091 /* Movie.storyboard in Resources */,
 				A604D84D2330945F00B1FBB6 /* LaunchScreen.storyboard in Resources */,
 				A604D84A2330945F00B1FBB6 /* Assets.xcassets in Resources */,
 				D24D79D0239FD49F00BCC941 /* MoviesTableViewCell.xib in Resources */,
@@ -527,6 +536,7 @@
 				A5615E5223A0E2BE00907091 /* VideoEntity.swift in Sources */,
 				A5615E6723A2198D00907091 /* VideoEntityFactory.swift in Sources */,
 				D25BF7D8239FD7160001E662 /* ListViewModel.swift in Sources */,
+				A5615E7123A38A7800907091 /* MovieViewController.swift in Sources */,
 				A604D8452330945C00B1FBB6 /* ListViewController.swift in Sources */,
 				A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */,
 				A5615E5823A0E73000907091 /* Bundle+.swift in Sources */,
