@@ -169,5 +169,6 @@ extension TestStubs {
     case videoListAPISuccessTest = "VideoListAPISuccessTest"
     case videoListAPISuccessEmptyTest = "VideoListAPISuccessEmptyTest"
     case videoListViewModelLoadNewSuccessTest = "VideoListViewModelLoadNewSuccessTest"
+    case videoListViewModelLoadNewSuccessEmptyTest = "VideoListViewModelLoadNewSuccessEmptyTest"
   }
 }
