@@ -1,5 +1,5 @@
 //
-//  MovieViewController.swift
+//  MoviePlayerViewController.swift
 //  VideoPlayer
 //
 //  Created by Hiromasa Suzuki on 2019/12/13.
@@ -12,7 +12,7 @@ import AVFoundation
 import AVKit
 import Hero
 
-class MovieViewController: UIViewController, UIGestureRecognizerDelegate {
+class MoviePlayerViewController: UIViewController, UIGestureRecognizerDelegate {
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var timeDurationLabel: UILabel!
   @IBOutlet private weak var baseView: UIView!
@@ -74,7 +74,7 @@ class MovieViewController: UIViewController, UIGestureRecognizerDelegate {
   }
 }
 
-extension MovieViewController: MSPlayerDelegate {
+extension MoviePlayerViewController: MSPlayerDelegate {
   func msPlayer(_ player: MSPlayer, stateDidChange state: MSPM.State) {
     if state == MSPM.State.playedToTheEnd {
       dismiss(animated: true, completion: nil)
