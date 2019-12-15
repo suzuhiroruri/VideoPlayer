@@ -14,6 +14,7 @@ class MovieTableViewCell: UITableViewCell {
 
   static let cellHeight: CGFloat = 100
 
+  @IBOutlet private weak var movieTotalTimeLabel: UILabel!
   @IBOutlet private weak var thumbnailView: UIImageView!
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var descriptionLabel: UILabel!
@@ -35,6 +36,8 @@ class MovieTableViewCell: UITableViewCell {
     thumbnailView.af_setImage(withURL: thumbnailUrl)
     heroId = "MovieTableViewCell_thumbnailView" + thumbnailUrl.description
     thumbnailView.hero.id = heroId
+
+    movieTotalTimeLabel.text = videoEntity.videoDuration.makeTimeDurationString()
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {

@@ -15,5 +15,5 @@ struct VideoEntity {
   let description: String
   let thumbnailUrl: URL?
   let videoUrl: URL?
-  let videoDuration: Int
+  let videoDuration: Double
 }
