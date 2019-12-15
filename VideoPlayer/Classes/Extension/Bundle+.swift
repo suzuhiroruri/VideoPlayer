@@ -14,10 +14,8 @@ extension Bundle {
   }
 
   class func ServerString(key: ServerKey) -> String {
-    guard let serverDictionary = Bundle.main.infoDictionary?["Server"] as? Dictionary<String, String> else {
-      return ""
-    }
-    guard let returnString = serverDictionary[key.rawValue] as String? else {
+    guard let serverDictionary = Bundle.main.infoDictionary?["Server"] as? Dictionary<String, String>,
+      let returnString = serverDictionary[key.rawValue] as String? else {
       return ""
     }
 
