@@ -167,10 +167,10 @@
 		A5615E5423A0E5C400907091 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				A5615E5B23A0EBFF00907091 /* VPError.swift */,
 				A5615E5523A0E5D800907091 /* APIModel.swift */,
 				A5615E5923A0E90100907091 /* APIRequest.swift */,
 				A5615E6423A208AD00907091 /* VideoListAPI.swift */,
+				A5615E5B23A0EBFF00907091 /* VPError.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
