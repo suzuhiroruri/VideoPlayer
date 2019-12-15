@@ -21,7 +21,6 @@
 		A5615E6323A2060900907091 /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6223A2060900907091 /* ClassNameProtocol.swift */; };
 		A5615E6523A208AD00907091 /* VideoListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6423A208AD00907091 /* VideoListAPI.swift */; };
 		A5615E6723A2198D00907091 /* VideoEntityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6623A2198D00907091 /* VideoEntityFactory.swift */; };
-		A5615E6923A2369D00907091 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E6823A2369D00907091 /* NVActivityIndicatorView.framework */; };
 		A5615E6B23A35EC300907091 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6A23A35EC300907091 /* UIColor+.swift */; };
 		A5615E7123A38A7800907091 /* MoviePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E7023A38A7800907091 /* MoviePlayerViewController.swift */; };
 		A5615E7323A38A8C00907091 /* MoviePlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5615E7223A38A8C00907091 /* MoviePlayer.storyboard */; };
@@ -96,7 +95,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D06D9223A5C80E0096D3D8 /* Hero.framework in Frameworks */,
-				A5615E6923A2369D00907091 /* NVActivityIndicatorView.framework in Frameworks */,
 				A5615E5E23A0EDA300907091 /* SwiftyJSON.framework in Frameworks */,
 				88A033FB0734979119D25FE7 /* Pods_VideoPlayer.framework in Frameworks */,
 				A5615E4A23A0C1A000907091 /* Alamofire.framework in Frameworks */,
@@ -436,7 +434,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Hero.framework",
 			);
 			name = carthage;
