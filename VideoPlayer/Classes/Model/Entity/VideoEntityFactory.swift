@@ -41,9 +41,9 @@ final class VideoEntityFactory {
       videoUrl = jsonVideoUrl
     }
 
-    var videoDuration: Int = 0
-    if let jsonVideoDuration =  json["video_duration"].int {
-      videoDuration = jsonVideoDuration
+    var videoDuration: Double = 0
+    if let jsonVideoDuration =  json["video_duration"].double {
+      videoDuration = jsonVideoDuration / 1000
     }
     return VideoEntity(title: title,
                        presenterName: presenterName,
