@@ -37,6 +37,7 @@
 		D2D06D9423A5DA2A0096D3D8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9323A5DA2A0096D3D8 /* UIView+.swift */; };
 		D2D06D9623A5DDEA0096D3D8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9523A5DDEA0096D3D8 /* Double+.swift */; };
 		D2D06D9923A6007B0096D3D8 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9823A6007B0096D3D8 /* VideoPlayerViewModel.swift */; };
+		D2D06D9C23A61A500096D3D8 /* APITestConfigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9B23A61A500096D3D8 /* APITestConfigration.swift */; };
 		D2D06D9F23A61C3E0096D3D8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
 		FBCD80591A8679A4B686D5D6 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		D2D06D9323A5DA2A0096D3D8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		D2D06D9523A5DDEA0096D3D8 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		D2D06D9823A6007B0096D3D8 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		D2D06D9B23A61A500096D3D8 /* APITestConfigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestConfigration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 		A604D8562330945F00B1FBB6 /* VideoPlayerTests */ = {
 			isa = PBXGroup;
 			children = (
+				D2D06DA523A61ED30096D3D8 /* Model */,
 				A604D8572330945F00B1FBB6 /* VideoPlayerTests.swift */,
 				A604D8592330945F00B1FBB6 /* Info.plist */,
 			);
@@ -293,6 +296,14 @@
 				A5615E6623A2198D00907091 /* VideoEntityFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		D2D06DA523A61ED30096D3D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2D06D9B23A61A500096D3D8 /* APITestConfigration.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -652,6 +663,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A604D8582330945F00B1FBB6 /* VideoPlayerTests.swift in Sources */,
+				D2D06D9C23A61A500096D3D8 /* APITestConfigration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
