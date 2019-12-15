@@ -35,6 +35,8 @@
 		D24D79D0239FD49F00BCC941 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24D79CE239FD49F00BCC941 /* MovieTableViewCell.xib */; };
 		D25BF7D8239FD7160001E662 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BF7D7239FD7160001E662 /* MovieListViewModel.swift */; };
 		D2D06D9223A5C80E0096D3D8 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D06D9123A5C80E0096D3D8 /* Hero.framework */; };
+		D2D06D9423A5DA2A0096D3D8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9323A5DA2A0096D3D8 /* UIView+.swift */; };
+		D2D06D9623A5DDEA0096D3D8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9523A5DDEA0096D3D8 /* Double+.swift */; };
 		FBCD80591A8679A4B686D5D6 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		D24D79CE239FD49F00BCC941 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		D25BF7D7239FD7160001E662 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		D2D06D9123A5C80E0096D3D8 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
+		D2D06D9323A5DA2A0096D3D8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		D2D06D9523A5DDEA0096D3D8 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,8 @@
 				A5615E6023A205A200907091 /* UITableView+.swift */,
 				A5615E6223A2060900907091 /* ClassNameProtocol.swift */,
 				A5615E6A23A35EC300907091 /* UIColor+.swift */,
+				D2D06D9323A5DA2A0096D3D8 /* UIView+.swift */,
+				D2D06D9523A5DDEA0096D3D8 /* Double+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -540,6 +546,8 @@
 				D25BF7D8239FD7160001E662 /* MovieListViewModel.swift in Sources */,
 				A5615E7123A38A7800907091 /* MoviePlayerViewController.swift in Sources */,
 				A604D8452330945C00B1FBB6 /* MovieListViewController.swift in Sources */,
+				D2D06D9423A5DA2A0096D3D8 /* UIView+.swift in Sources */,
+				D2D06D9623A5DDEA0096D3D8 /* Double+.swift in Sources */,
 				A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */,
 				A5615E5823A0E73000907091 /* Bundle+.swift in Sources */,
 				D24D79CF239FD49F00BCC941 /* MovieTableViewCell.swift in Sources */,

@@ -23,15 +23,11 @@ class MoviePlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     MSPlayer()
   }()
 
-  private var formatter = DateFormatter()
-
   override func viewDidLoad() {
     super.viewDidLoad()
 
     self.hero.isEnabled = true
     baseView.hero.id = heroId
-
-    formatter.dateFormat = "mm:ss"
 
     guard let videoEntity = videoEntity,
       let videoURL = videoEntity.videoUrl else {
@@ -84,13 +80,11 @@ extension MoviePlayerViewController: MSPlayerDelegate {
   func msPlayer(_ player: MSPlayer, loadTimeDidChange loadedDuration: TimeInterval, totalDuration: TimeInterval) {}
 
   func msPlayer(_ player: MSPlayer, playTimeDidChange current: TimeInterval, total: TimeInterval) {
-    let currentTimeInterval = floor(current)
-    let currentDate = Date(timeIntervalSinceReferenceDate: currentTimeInterval)
-    let currentStr = formatter.string(from: currentDate)
+    let currentTimeInterval: Double = floor(current)
+    let currentStr: String = currentTimeInterval.makeTimeDurationString()
 
-    let remainTimeInterval = total - currentTimeInterval
-    let remainDate = Date(timeIntervalSinceReferenceDate: remainTimeInterval)
-    let remainStr = formatter.string(from: remainDate)
+    let remainTimeInterval: Double = total - currentTimeInterval
+    let remainStr: String = remainTimeInterval.makeTimeDurationString()
 
     self.timeDurationLabel.text = currentStr + " / " + remainStr
   }
