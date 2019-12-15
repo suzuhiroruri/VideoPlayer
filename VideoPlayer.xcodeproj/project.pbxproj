@@ -320,7 +320,6 @@
 		D2D06DA523A61ED30096D3D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D2D06D9B23A61A500096D3D8 /* APITestConfigration.swift */,
 				D2D06DA623A61EFA0096D3D8 /* API */,
 			);
 			path = Model;
@@ -329,6 +328,7 @@
 		D2D06DA623A61EFA0096D3D8 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D2D06D9B23A61A500096D3D8 /* APITestConfigration.swift */,
 				D2D06DA723A61F190096D3D8 /* VideoListAPISuccess.swift */,
 				D2D06DAB23A621840096D3D8 /* VideoListAPISuccess.json */,
 				D2D06DB223A634B20096D3D8 /* VideoListAPISuccessEmpty.swift */,
