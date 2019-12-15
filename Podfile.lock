@@ -4,6 +4,19 @@ PODS:
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
+  - OHHTTPStubs/Core (8.0.0)
+  - OHHTTPStubs/Default (8.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (8.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (8.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (8.0.0)
+  - OHHTTPStubs/Swift (8.0.0):
+    - OHHTTPStubs/Default
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
@@ -12,6 +25,7 @@ PODS:
 
 DEPENDENCIES:
   - MSPlayer
+  - OHHTTPStubs/Swift
   - R.swift
   - SwiftFormat/CLI (= 0.40.10)
   - SwiftLint (= 0.33.0)
@@ -25,15 +39,17 @@ SPEC REPOS:
   trunk:
     - MSPlayer
     - NVActivityIndicatorView
+    - OHHTTPStubs
 
 SPEC CHECKSUMS:
   MSPlayer: 979d6abf431d01f729fbffd702452b190b301055
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   SwiftFormat: d0e2118da5bfccc0158f0b8eff80c476c5acd984
   SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
-PODFILE CHECKSUM: 4f0a3ded5198d0210564f121bb750dea1bcd21dc
+PODFILE CHECKSUM: 28a7cc6cd94af6ff132719d33b73bad43afe32dc
 
 COCOAPODS: 1.8.1

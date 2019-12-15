@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		88A033FB0734979119D25FE7 /* Pods_VideoPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7808E9EDA2CBC271BE1F28E /* Pods_VideoPlayer.framework */; };
-		A5615E4523A0BB4600907091 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
 		A5615E4A23A0C1A000907091 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
 		A5615E4D23A0C1F400907091 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4423A0BB4600907091 /* AlamofireImage.framework */; };
 		A5615E5223A0E2BE00907091 /* VideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5123A0E2BE00907091 /* VideoEntity.swift */; };
@@ -38,6 +37,7 @@
 		D2D06D9423A5DA2A0096D3D8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9323A5DA2A0096D3D8 /* UIView+.swift */; };
 		D2D06D9623A5DDEA0096D3D8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9523A5DDEA0096D3D8 /* Double+.swift */; };
 		D2D06D9923A6007B0096D3D8 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9823A6007B0096D3D8 /* VideoPlayerViewModel.swift */; };
+		D2D06D9F23A61C3E0096D3D8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
 		FBCD80591A8679A4B686D5D6 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,7 +104,6 @@
 				A5615E5E23A0EDA300907091 /* SwiftyJSON.framework in Frameworks */,
 				88A033FB0734979119D25FE7 /* Pods_VideoPlayer.framework in Frameworks */,
 				A5615E4A23A0C1A000907091 /* Alamofire.framework in Frameworks */,
-				A5615E4523A0BB4600907091 /* Alamofire.framework in Frameworks */,
 				A5615E4D23A0C1F400907091 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D06D9F23A61C3E0096D3D8 /* Alamofire.framework in Frameworks */,
 				FBCD80591A8679A4B686D5D6 /* Pods_VideoPlayerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,9 +326,13 @@
 			buildConfigurationList = A604D85F2330945F00B1FBB6 /* Build configuration list for PBXNativeTarget "VideoPlayerTests" */;
 			buildPhases = (
 				8EA78513A1C9FA821F43E81B /* [CP] Check Pods Manifest.lock */,
+				D2D06DA223A61DB60096D3D8 /* swiftformat */,
+				D2D06DA423A61DE80096D3D8 /* swiftlint */,
 				A604D84F2330945F00B1FBB6 /* Sources */,
 				A604D8502330945F00B1FBB6 /* Frameworks */,
 				A604D8512330945F00B1FBB6 /* Resources */,
+				529EB65A36CC3001132B4364 /* [CP] Embed Pods Frameworks */,
+				D2D06DA123A61C5E0096D3D8 /* carthage */,
 			);
 			buildRules = (
 			);
@@ -401,6 +405,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		529EB65A36CC3001132B4364 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoPlayerTests/Pods-VideoPlayerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoPlayerTests/Pods-VideoPlayerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoPlayerTests/Pods-VideoPlayerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8EA78513A1C9FA821F43E81B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -518,6 +539,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . \n";
+		};
+		D2D06DA123A61C5E0096D3D8 /* carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		D2D06DA223A61DB60096D3D8 /* swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.swiftformat",
+			);
+			name = swiftformat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . \n";
+		};
+		D2D06DA423A61DE80096D3D8 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z ${CI+x} ];then\n  if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\n  else\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n  fi\nfi;\n";
 		};
 		D37D1FD68ACC804E87FD33F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -782,6 +859,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9JMCJCA8J2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VideoPlayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -804,6 +885,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9JMCJCA8J2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VideoPlayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

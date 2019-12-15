@@ -16,6 +16,7 @@ target 'VideoPlayer' do
   target 'VideoPlayerTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'OHHTTPStubs/Swift'
   end
 
 end
