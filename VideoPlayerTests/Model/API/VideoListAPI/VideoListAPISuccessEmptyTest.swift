@@ -1,5 +1,5 @@
 //
-//  VideoListAPIFailedEmpty.swift
+//  VideoListAPIFailedEmptyTest.swift
 //  VideoPlayerTests
 //
 //  Created by Hiromasa Suzuki on 2019/12/15.
@@ -9,7 +9,7 @@
 import XCTest
 import SwiftyJSON
 
-class VideoListAPIFailedEmpty: XCTestCase {
+class VideoListAPIFailedEmptyTest: XCTestCase {
   let requestAPIModel = APIModel()
 
   override func setUp() {
@@ -17,7 +17,7 @@ class VideoListAPIFailedEmpty: XCTestCase {
 
     // API test setting
     let testConfig = APITestConfig(apiType: .appAPIHost,
-                                   jsonFileType: .videoListAPISuccessEmpty,
+                                   jsonFileType: .videoListAPISuccessEmptyTest,
                                    statusCode: 200)
     TestStubs.setUp(config: testConfig)
   }

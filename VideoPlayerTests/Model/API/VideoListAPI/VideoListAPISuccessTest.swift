@@ -1,5 +1,5 @@
 //
-//  VideoListAPISuccess.swift
+//  VideoListAPISuccessTest.swift
 //  VideoPlayerTests
 //
 //  Created by Hiromasa Suzuki on 2019/12/15.
@@ -9,7 +9,7 @@
 import XCTest
 import SwiftyJSON
 
-class VideoListAPISuccess: XCTestCase {
+class VideoListAPISuccessTest: XCTestCase {
   let requestAPIModel = APIModel()
 
   override func setUp() {
@@ -17,7 +17,7 @@ class VideoListAPISuccess: XCTestCase {
 
     // API test setting
     let testConfig = APITestConfig(apiType: .appAPIHost,
-                                   jsonFileType: .videoListAPISuccess,
+                                   jsonFileType: .videoListAPISuccessTest,
                                    statusCode: 200)
     TestStubs.setUp(config: testConfig)
   }

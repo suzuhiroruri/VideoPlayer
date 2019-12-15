@@ -1,5 +1,5 @@
 //
-//  VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.swift
+//  VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmptyTest.swift
 //  VideoPlayerTests
 //
 //  Created by Hiromasa Suzuki on 2019/12/15.
@@ -9,15 +9,14 @@
 import XCTest
 import SwiftyJSON
 
-class VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty: XCTestCase {
+class VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmptyTest: XCTestCase {
   let requestAPIModel = APIModel()
   lazy var json: JSON = uninitialized()
 
   override func setUp() {
     super.setUp()
 
-    // JSONを取得
-    guard let json = ModelTestConfigration.getTestJSON(jsonFileType: .videoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty) else {
+    guard let json = ModelTestConfigration.getTestJSON(jsonFileType: .videoEntityFactoryCreateArrayFromJSONObjectSuccessEmptyTest) else {
       XCTFail("Json failure")
       return
     }
@@ -41,4 +40,3 @@ class VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty: XCTestCase {
     XCTAssertTrue(true, "Expected.")
   }
 }
-

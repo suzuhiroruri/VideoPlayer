@@ -30,7 +30,7 @@ class ModelTestConfigration {
 
 extension ModelTestConfigration {
   enum JsonFileType: String {
-    case videoEntityFactoryCreateArrayFromJSONObjectSuccess = "VideoEntityFactoryCreateArrayFromJSONObjectSuccess"
-    case videoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty = "VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty"
+    case videoEntityFactoryCreateArrayFromJSONObjectSuccessTest = "VideoEntityFactoryCreateArrayFromJSONObjectSuccessTest"
+    case videoEntityFactoryCreateArrayFromJSONObjectSuccessEmptyTest = "VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmptyTest"
   }
 }

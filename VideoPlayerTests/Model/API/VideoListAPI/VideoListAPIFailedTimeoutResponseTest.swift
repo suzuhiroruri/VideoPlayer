@@ -1,5 +1,5 @@
 //
-//  VideoListAPIFailedTimeoutResponse.swift.swift
+//  VideoListAPIFailedTimeoutResponseTest.swift.swift
 //  VideoPlayerTests
 //
 //  Created by Hiromasa Suzuki on 2019/12/15.
@@ -9,7 +9,7 @@
 import XCTest
 import SwiftyJSON
 
-class VideoListAPIFailedTimeoutResponse: XCTestCase {
+class VideoListAPIFailedTimeoutResponseTest: XCTestCase {
   let requestAPIModel = APIModel()
 
   override func setUp() {
@@ -17,7 +17,7 @@ class VideoListAPIFailedTimeoutResponse: XCTestCase {
 
     // API test setting
     let testConfig = APITestConfig(apiType: .appAPIHost,
-                                   jsonFileType: .videoListAPISuccess,
+                                   jsonFileType: .videoListAPISuccessTest,
                                    statusCode: 200,
                                    requestTime: 20)
     TestStubs.setUp(config: testConfig)

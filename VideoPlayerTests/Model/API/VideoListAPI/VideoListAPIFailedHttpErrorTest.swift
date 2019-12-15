@@ -1,5 +1,5 @@
 //
-//  VideoListAPIFailedHttpError.swift
+//  VideoListAPIFailedHttpErrorTest.swift
 //  VideoPlayerTests
 //
 //  Created by Hiromasa Suzuki on 2019/12/15.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class VideoListAPIFailedHttpError: XCTestCase {
+class VideoListAPIFailedHttpErrorTest: XCTestCase {
 
   let requestAPIModel = APIModel()
 

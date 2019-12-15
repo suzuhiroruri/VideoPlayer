@@ -166,7 +166,7 @@ class TestStubs {
 extension TestStubs {
   /// read file type form bundle
   enum JsonFileType: String {
-    case videoListAPISuccess = "VideoListAPISuccess"
-    case videoListAPISuccessEmpty = "VideoListAPISuccessEmpty"
+    case videoListAPISuccessTest = "VideoListAPISuccessTest"
+    case videoListAPISuccessEmptyTest = "VideoListAPISuccessEmptyTest"
   }
 }
