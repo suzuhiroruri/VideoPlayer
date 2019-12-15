@@ -8,15 +8,18 @@
 
 import UIKit
 import AlamofireImage
+import Hero
 
 class MoviesTableViewCell: UITableViewCell {
 
   static let cellHeight: CGFloat = 100
 
-  @IBOutlet weak var thumbnailView: UIImageView!
-  @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var descriptionLabel: UILabel!
-  @IBOutlet weak var presenterNameLabel: UILabel!
+  @IBOutlet private weak var thumbnailView: UIImageView!
+  @IBOutlet private weak var titleLabel: UILabel!
+  @IBOutlet private weak var descriptionLabel: UILabel!
+  @IBOutlet private weak var presenterNameLabel: UILabel!
+
+  var heroId = ""
 
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -30,6 +33,8 @@ class MoviesTableViewCell: UITableViewCell {
       return
     }
     thumbnailView.af_setImage(withURL: thumbnailUrl)
+    heroId = "MoviesTableViewCell_thumbnailView" + thumbnailUrl.description
+    thumbnailView.hero.id = heroId
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {
