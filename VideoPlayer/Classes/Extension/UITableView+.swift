@@ -6,7 +6,6 @@
 //  Copyright © 2019 Hiromasa Suzuki All rights reserved.
 //
 import UIKit
-import Foundation
 
 extension UITableView {
   public func register(cellType: UITableViewCell.Type, bundle: Bundle? = nil) {

@@ -5,7 +5,7 @@
 //  Created by Hiromasa Suzuki on 2019/12/12.
 //  Copyright © 2019 Hiromasa Suzuki All rights reserved.
 //
-import Foundation
+
 import Alamofire
 import SwiftyJSON
 

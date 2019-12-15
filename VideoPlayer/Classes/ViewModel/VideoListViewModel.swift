@@ -1,16 +1,15 @@
 //
-//  MovieListViewModel.swift
+//  VideoListViewModel.swift
 //  VideoPlayer
 //
 //  Created by Hiromasa Suzuki on 2019/12/10.
 //  Copyright © 2019 Hiromasa Suzuki All rights reserved.
 //
 
-import Foundation
 import Alamofire
 import SwiftyJSON
 
-class MovieListViewModel {
+class VideoListViewModel {
 
   let requestAPIModel =  APIModel()
   var videoEntityArray = [VideoEntity]()
