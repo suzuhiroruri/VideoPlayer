@@ -38,7 +38,12 @@
 		D2D06D9623A5DDEA0096D3D8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9523A5DDEA0096D3D8 /* Double+.swift */; };
 		D2D06D9923A6007B0096D3D8 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9823A6007B0096D3D8 /* VideoPlayerViewModel.swift */; };
 		D2D06D9C23A61A500096D3D8 /* APITestConfigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9B23A61A500096D3D8 /* APITestConfigration.swift */; };
+		D2D06D9D23A61B0B0096D3D8 /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5723A0E73000907091 /* Bundle+.swift */; };
+		D2D06D9E23A61BF80096D3D8 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5523A0E5D800907091 /* APIModel.swift */; };
 		D2D06D9F23A61C3E0096D3D8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
+		D2D06DAD23A622C10096D3D8 /* VideoListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6423A208AD00907091 /* VideoListAPI.swift */; };
+		D2D06DAE23A623410096D3D8 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5923A0E90100907091 /* APIRequest.swift */; };
+		D2D06DAF23A623520096D3D8 /* VPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5B23A0EBFF00907091 /* VPError.swift */; };
 		FBCD80591A8679A4B686D5D6 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -662,6 +667,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D06DAF23A623520096D3D8 /* VPError.swift in Sources */,
+				D2D06D9E23A61BF80096D3D8 /* APIModel.swift in Sources */,
+				D2D06DAE23A623410096D3D8 /* APIRequest.swift in Sources */,
+				D2D06D9D23A61B0B0096D3D8 /* Bundle+.swift in Sources */,
+				D2D06DAD23A622C10096D3D8 /* VideoListAPI.swift in Sources */,
 				A604D8582330945F00B1FBB6 /* VideoPlayerTests.swift in Sources */,
 				D2D06D9C23A61A500096D3D8 /* APITestConfigration.swift in Sources */,
 			);
