@@ -1,5 +1,5 @@
 //
-//  MoviesTableViewCell.swift
+//  MovieTableViewCell.swift
 //  VideoPlayer
 //
 //  Created by 鈴木 宏昌 on 2019/12/10.
@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 import Hero
 
-class MoviesTableViewCell: UITableViewCell {
+class MovieTableViewCell: UITableViewCell {
 
   static let cellHeight: CGFloat = 100
 
@@ -33,7 +33,7 @@ class MoviesTableViewCell: UITableViewCell {
       return
     }
     thumbnailView.af_setImage(withURL: thumbnailUrl)
-    heroId = "MoviesTableViewCell_thumbnailView" + thumbnailUrl.description
+    heroId = "MovieTableViewCell_thumbnailView" + thumbnailUrl.description
     thumbnailView.hero.id = heroId
   }
 
