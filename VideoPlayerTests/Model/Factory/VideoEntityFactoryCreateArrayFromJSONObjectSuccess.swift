@@ -18,7 +18,7 @@ class VideoEntityFactoryCreateArrayFromJSONObjectSuccess: XCTestCase {
 
     // JSONを取得
     guard let json = ModelTestConfigration.getTestJSON(jsonFileType: .videoEntityFactoryCreateArrayFromJSONObjectSuccess) else {
-      XCTFail("JSON取得失敗！")
+      XCTFail("Json failure")
       return
     }
 

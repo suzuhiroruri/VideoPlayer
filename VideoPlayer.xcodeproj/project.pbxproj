@@ -56,6 +56,8 @@
 		D2D06DC423A677D20096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = D2D06DC323A677D20096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccess.json */; };
 		D2D06DC523A679730096D3D8 /* VideoEntityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6623A2198D00907091 /* VideoEntityFactory.swift */; };
 		D2D06DC623A679EE0096D3D8 /* VideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5123A0E2BE00907091 /* VideoEntity.swift */; };
+		D2D06DC823A67EAD0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DC723A67EAD0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.swift */; };
+		D2D06DCA23A67FCB0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = D2D06DC923A67FCB0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.json */; };
 		FBCD80591A8679A4B686D5D6 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +124,8 @@
 		D2D06DBF23A675320096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntityFactoryCreateArrayFromJSONObjectSuccess.swift; sourceTree = "<group>"; };
 		D2D06DC123A676F00096D3D8 /* ModelTestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTestConfiguration.swift; sourceTree = "<group>"; };
 		D2D06DC323A677D20096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccess.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoEntityFactoryCreateArrayFromJSONObjectSuccess.json; sourceTree = "<group>"; };
+		D2D06DC723A67EAD0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.swift; sourceTree = "<group>"; };
+		D2D06DC923A67FCB0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +359,8 @@
 			children = (
 				D2D06DBF23A675320096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccess.swift */,
 				D2D06DC323A677D20096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccess.json */,
+				D2D06DC723A67EAD0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.swift */,
+				D2D06DC923A67FCB0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.json */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D06DCA23A67FCB0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.json in Resources */,
 				D2D06DC423A677D20096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccess.json in Resources */,
 				D2D06DAC23A621840096D3D8 /* VideoListAPISuccess.json in Resources */,
 				D2D06DB523A634EC0096D3D8 /* VideoListAPISuccessEmpty.json in Resources */,
@@ -729,6 +736,7 @@
 				D2D06DC223A676F00096D3D8 /* ModelTestConfiguration.swift in Sources */,
 				D2D06DAE23A623410096D3D8 /* APIRequest.swift in Sources */,
 				D2D06D9D23A61B0B0096D3D8 /* Bundle+.swift in Sources */,
+				D2D06DC823A67EAD0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmpty.swift in Sources */,
 				D2D06DAD23A622C10096D3D8 /* VideoListAPI.swift in Sources */,
 				A604D8582330945F00B1FBB6 /* VideoPlayerTests.swift in Sources */,
 				D2D06D9C23A61A500096D3D8 /* APITestConfigration.swift in Sources */,
