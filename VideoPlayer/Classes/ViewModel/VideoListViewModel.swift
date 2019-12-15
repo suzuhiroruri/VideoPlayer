@@ -15,7 +15,10 @@ class VideoListViewModel {
   var videoEntityArray = [VideoEntity]()
 
   func loadNew(completion completionBlock: @escaping (Bool) -> Void) {
-    requestAPIModel.videoListAPI(completion: { response in
+    requestAPIModel.videoListAPI(completion: { [weak self] response in
+      guard let `self` = self else {
+        return
+      }
       switch response {
       case .success(let json):
         self.videoEntityArray = VideoEntityFactory.sharedInstance.createArrayFromJSONObject(json: json)
