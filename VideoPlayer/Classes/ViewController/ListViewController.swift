@@ -97,13 +97,12 @@ extension ListViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let videoEntity: VideoEntity = viewModel.videoEntityArray[indexPath.row]
-    guard let navigationController = R.storyboard.movie().instantiateInitialViewController() as? UINavigationController,
-      let movieController = navigationController.children.first as? MovieViewController else {
+    guard let movieController = R.storyboard.movie().instantiateInitialViewController() as? MovieViewController else {
       return
     }
     movieController.videoEntity = videoEntity
-    navigationController.modalPresentationStyle = .fullScreen
-    present(navigationController, animated: true, completion: nil)
+    movieController.modalPresentationStyle = .fullScreen
+    present(movieController, animated: true, completion: nil)
   }
 }
 
