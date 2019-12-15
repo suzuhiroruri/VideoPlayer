@@ -37,6 +37,7 @@
 		D2D06D9223A5C80E0096D3D8 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D06D9123A5C80E0096D3D8 /* Hero.framework */; };
 		D2D06D9423A5DA2A0096D3D8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9323A5DA2A0096D3D8 /* UIView+.swift */; };
 		D2D06D9623A5DDEA0096D3D8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9523A5DDEA0096D3D8 /* Double+.swift */; };
+		D2D06D9923A6007B0096D3D8 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9823A6007B0096D3D8 /* VideoPlayerViewModel.swift */; };
 		FBCD80591A8679A4B686D5D6 /* Pods_VideoPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B627E503D28E58D48100956 /* Pods_VideoPlayerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		D2D06D9123A5C80E0096D3D8 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
 		D2D06D9323A5DA2A0096D3D8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		D2D06D9523A5DDEA0096D3D8 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
+		D2D06D9823A6007B0096D3D8 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				D25BF7D7239FD7160001E662 /* VideoListViewModel.swift */,
+				D2D06D9823A6007B0096D3D8 /* VideoPlayerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5615E5C23A0EBFF00907091 /* VPError.swift in Sources */,
+				D2D06D9923A6007B0096D3D8 /* VideoPlayerViewModel.swift in Sources */,
 				A5615E6323A2060900907091 /* ClassNameProtocol.swift in Sources */,
 				A5615E5623A0E5D800907091 /* APIModel.swift in Sources */,
 				A5615E6123A205A200907091 /* UITableView+.swift in Sources */,

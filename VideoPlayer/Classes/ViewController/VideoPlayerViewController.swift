@@ -15,7 +15,7 @@ class VideoPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
   @IBOutlet private weak var timeDurationLabel: UILabel!
   @IBOutlet private weak var baseView: UIView!
 
-  var videoEntity: VideoEntity?
+  private let viewModel = VideoPlayerViewModel()
   var heroId = ""
 
   private lazy var videoPlayer = {
@@ -34,19 +34,19 @@ class VideoPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
   }
 
   private func setupMSPlayerConfig() {
-      MSPlayerConfig.openRecorder = false
-      MSPlayerConfig.shouldAutoPlay = true
-      MSPlayerConfig.playerPanSeekRate = 0.5
-      MSPlayerConfig.playerBrightnessChangeRate = 2.0
-      MSPlayerConfig.playerVolumeChangeRate = 0.5
-      MSPlayerConfig.playCoverImage = nil
-      MSPlayerConfig.backButtonImage = nil
-      MSPlayerConfig.replayButtonImage = nil
-      MSPlayerConfig.loaderTintColor = UIColor.quipperBlueColor()
-      MSPlayerConfig.sliderMinTrackTintColor = UIColor.quipperBlueColor()
-      MSPlayerConfig.sliderThumbImage = nil
+    MSPlayerConfig.openRecorder = false
+    MSPlayerConfig.shouldAutoPlay = true
+    MSPlayerConfig.playerPanSeekRate = 0.5
+    MSPlayerConfig.playerBrightnessChangeRate = 2.0
+    MSPlayerConfig.playerVolumeChangeRate = 0.5
+    MSPlayerConfig.playCoverImage = nil
+    MSPlayerConfig.backButtonImage = nil
+    MSPlayerConfig.replayButtonImage = nil
+    MSPlayerConfig.loaderTintColor = UIColor.quipperBlueColor()
+    MSPlayerConfig.sliderMinTrackTintColor = UIColor.quipperBlueColor()
+    MSPlayerConfig.sliderThumbImage = nil
   }
-    
+
   private func setupVideoPlayerView() {
     videoPlayer.delegate = self
     baseView.addSubview(videoPlayer)
@@ -58,18 +58,16 @@ class VideoPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
   }
 
   private func setupVideoResource() {
-    guard let videoEntity = videoEntity,
-      let videoURL = videoEntity.videoUrl else {
+    guard let videoEntity = viewModel.videoEntity,
+      let asset = viewModel.getVideoAsset() else {
       return
     }
-    self.titleLabel.text = videoEntity.title
-    let resourceDefinition = MSPlayerResourceDefinition(videoId: videoURL.absoluteString,
-                                                        videoName: videoEntity.title,
-                                                        url: videoURL,
-                                                        definition: "",
-                                                        coverURLRequest: nil)
-    let asset = MSPlayerResource(definitions: [resourceDefinition])
+    titleLabel.text = videoEntity.title
     videoPlayer.setVideoBy(asset)
+  }
+
+  func setupViewModel(videoEntity: VideoEntity) {
+    viewModel.videoEntity = videoEntity
   }
 
   @IBAction func tapCloseButton(_ sender: UIButton) {
@@ -88,13 +86,10 @@ extension VideoPlayerViewController: MSPlayerDelegate {
   func msPlayer(_ player: MSPlayer, loadTimeDidChange loadedDuration: TimeInterval, totalDuration: TimeInterval) {}
 
   func msPlayer(_ player: MSPlayer, playTimeDidChange current: TimeInterval, total: TimeInterval) {
-    let currentTimeInterval: Double = floor(current)
-    let currentStr: String = currentTimeInterval.makeTimeDurationString()
+    let playTimeString: (currentTime: String, remainTime: String)
+      = viewModel.getPlayTimeString(current: current, total: total)
 
-    let remainTimeInterval: Double = total - currentTimeInterval
-    let remainStr: String = remainTimeInterval.makeTimeDurationString()
-
-    self.timeDurationLabel.text = currentStr + " / " + remainStr
+    self.timeDurationLabel.text = playTimeString.currentTime + " / " + playTimeString.remainTime
   }
 
   func msPlayer(_ player: MSPlayer, isPlaying: Bool) {}
