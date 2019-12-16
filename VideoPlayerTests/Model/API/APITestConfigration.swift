@@ -9,7 +9,7 @@
 import Foundation
 import OHHTTPStubs
 
-/// TestStubs.APITypeのEquatable
+/// TestStubs.APIType Equatable
 func==(lhs: TestStubs.APIType, rhs: TestStubs.APIType) -> Bool {
   switch (lhs, rhs) {
   case (.appAPIHost, .appAPIHost):
@@ -31,7 +31,6 @@ struct APITestConfig {
   let headers: [AnyHashable: Any]?
   let requestTime: TimeInterval
   let responseTime: TimeInterval
-  let fileType: FileType
 
   init(apiType: TestStubs.APIType,
        jsonFileType: TestStubs.JsonFileType? = nil,
@@ -39,8 +38,7 @@ struct APITestConfig {
        statusCode: Int,
        headers: [AnyHashable: Any]? = nil,
        requestTime: TimeInterval = 0,
-       responseTime: TimeInterval = 0,
-       fileType: FileType = .json) {
+       responseTime: TimeInterval = 0) {
 
     self.apiType = apiType
     self.jsonFileType = jsonFileType
@@ -49,14 +47,6 @@ struct APITestConfig {
     self.headers = headers
     self.requestTime = requestTime
     self.responseTime = responseTime
-    self.fileType = fileType
-  }
-
-  enum FileType: String {
-    /// json
-    case json
-    /// html
-    case html
   }
 }
 
@@ -89,8 +79,7 @@ class TestStubs {
 
     if tmpData == nil,
       let jsonFileType = config.jsonFileType,
-      let data = TestStubs.getTestJSON(jsonFileType: jsonFileType,
-                                       fileType: config.fileType) {
+      let data = TestStubs.getTestJSON(jsonFileType: jsonFileType) {
       tmpData = data
     }
 
@@ -146,9 +135,9 @@ class TestStubs {
   ///
   /// - Parameter jsonFileType: file type
   /// - Returns: Data?
-  static func getTestJSON(jsonFileType: TestStubs.JsonFileType, fileType: APITestConfig.FileType = .json) -> Data? {
+  static func getTestJSON(jsonFileType: TestStubs.JsonFileType) -> Data? {
     let testBundle = Bundle(for: TestStubs.self)
-    if let jsonPath = testBundle.path(forResource: jsonFileType.rawValue, ofType: fileType.rawValue) {
+    if let jsonPath = testBundle.path(forResource: jsonFileType.rawValue, ofType: ".json") {
       let url = URL(fileURLWithPath: jsonPath)
       if let jsonData = try? Data(contentsOf: url) {
         return jsonData
