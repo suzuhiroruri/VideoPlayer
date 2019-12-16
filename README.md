@@ -1,50 +1,44 @@
-# 課題
+# VideoPlayer
 
-動画を再生する iOS アプリケーションを作成します。
 
-## 最小要件（2画面）
 
-### A）動画ファイルのプレイリストを表示する
+## Table of content
 
-- [このJSONファイル](https://quipper.github.io/native-technical-exam/playlist.json)からプレイリストを描画してください
-- タイトル、サムネイル、説明、講師の名前を表示する
-- タイトル、説明、講師の名前、時間の文字列は省略せずに表示する必要があります
-- 動画が選択されたら、フルスクリーンモードで動画の再生を開始してください
+- [Running the App](#Running-the-App)
+- [Testing](#Testing)
+- [Requirements](#Requirements)
+- [Coding Rules](#Coding-rules)
 
-### B）動画をフルスクリーンモードで再生する
+## Running the App
 
-- ランドスケープでの全画面再生をサポート
-- 再生、一時停止、再生位置を表示/調整するためのスライダー
-- 再生時間と終了時間を表示し続ける
+Before being able to run the App, you have to install the App dependencies using [CocoaPods](https://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage).
 
-## コーディングの制限
+##### CocoaPods
 
-- Swift 5.0 以上
-- iOS 11 以降
-- こちらのスタイルを満たしてください: [Swift Style Guide - Google](https://google.github.io/swift/)
-- Apache, MIT, BSD およびそれらの派生ライセンスで公開されているライブラリを使うことができます
+- Install CocoaPods
+- Type `pod install`
 
-## ターゲットデバイス
+##### Carthage
 
-- iPhone SE 以降のすべての iPhone 端末
+- Install Carthage
+- Type `carthage update --platform iOS`
 
-## 言語
+Run `VideoPlayer` workspace after install the App dependencies.
 
-- ソースコード (コメントを含む) 及び Git の commit メッセージは英語で記述してください
+## Testing
 
-## Gitコミット
+Before being able to testing, you have to install the demo dependencies using [CocoaPods](https://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage).
 
-コミットを複数に分割してください。1つの大きなコミットにまとめないでください。
+Reference here: [Running the App](#Running-the-App)
 
-## 提出方法
+Test `VideoPlayerTests` workspace after install the App dependencies.
 
-こちらのコマンド `git bundle create repo.bundle HEAD master` を実行し, 生成された `repo.bundle` ファイルをこちらのアドレス (hiring.jp@quipper.com) 宛にメールで送ってください。(`git-bundle` とは: [Git - git-bundle Documentation](https://git-scm.com/docs/git-bundle))
+## Requirements
 
-## ボーナスポイント
+- Swift 5.0 or higher
+- iOS 11 or higher
 
-- 仕様を満たしていることを確認するため適宜 Unit test を追加してみてください。
-- フルスクリーンの動画ビューを開始または終了するときに、トランジションに適したアニメーションを使用してください
-  - 例: ユーザーが選択したサムネイルビューから動画ビューが開き、動画が閉じられると動画ビューがサムネイルビューに戻ります
-  - または、スキルをアピールするためにより良いエフェクト/アニメーションを提案することもできます
-- 限られた時間で最高のUI / UXを設計してみてください
-- アプリを改善するためのアイデアがあれば、自由にアプリに取り入れることができます
+## Coding Rules
+
+Reference here: [Swift Style Guide - Google](https://google.github.io/swift/)
+
