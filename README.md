@@ -1,6 +1,5 @@
 # VideoPlayer
-
-
+![demo](/VideoPlayer/Resources/demo.gif)
 
 ## Table of content
 
@@ -41,4 +40,3 @@ Test `VideoPlayerTests` workspace after install the App dependencies.
 ## Coding Rules
 
 Reference here: [Swift Style Guide - Google](https://google.github.io/swift/)
-
