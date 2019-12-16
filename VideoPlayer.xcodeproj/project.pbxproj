@@ -27,6 +27,7 @@
 		A5615E7B23A7355500907091 /* Double+Test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E7A23A7355500907091 /* Double+Test1.swift */; };
 		A5615E7D23A7362A00907091 /* Double+Test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E7C23A7362A00907091 /* Double+Test2.swift */; };
 		A5615E7F23A736D400907091 /* Double+Test3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E7E23A736D400907091 /* Double+Test3.swift */; };
+		A5615E8323A737AF00907091 /* Bundle+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E8223A737AF00907091 /* Bundle+Test.swift */; };
 		A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8422330945C00B1FBB6 /* AppDelegate.swift */; };
 		A604D8452330945C00B1FBB6 /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8442330945C00B1FBB6 /* VideoListViewController.swift */; };
 		A604D8482330945C00B1FBB6 /* VideoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A604D8462330945C00B1FBB6 /* VideoList.storyboard */; };
@@ -110,6 +111,7 @@
 		A5615E7A23A7355500907091 /* Double+Test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Test1.swift"; sourceTree = "<group>"; };
 		A5615E7C23A7362A00907091 /* Double+Test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Test2.swift"; sourceTree = "<group>"; };
 		A5615E7E23A736D400907091 /* Double+Test3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Test3.swift"; sourceTree = "<group>"; };
+		A5615E8223A737AF00907091 /* Bundle+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Test.swift"; sourceTree = "<group>"; };
 		A604D83F2330945C00B1FBB6 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A604D8422330945C00B1FBB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A604D8442330945C00B1FBB6 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
@@ -277,11 +279,28 @@
 		A5615E7923A7352000907091 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				A5615E8123A7379B00907091 /* Bundle+ */,
+				A5615E8023A7377E00907091 /* Double+ */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A5615E8023A7377E00907091 /* Double+ */ = {
+			isa = PBXGroup;
+			children = (
 				A5615E7A23A7355500907091 /* Double+Test1.swift */,
 				A5615E7C23A7362A00907091 /* Double+Test2.swift */,
 				A5615E7E23A736D400907091 /* Double+Test3.swift */,
 			);
-			path = Extension;
+			path = "Double+";
+			sourceTree = "<group>";
+		};
+		A5615E8123A7379B00907091 /* Bundle+ */ = {
+			isa = PBXGroup;
+			children = (
+				A5615E8223A737AF00907091 /* Bundle+Test.swift */,
+			);
+			path = "Bundle+";
 			sourceTree = "<group>";
 		};
 		A604D8362330945C00B1FBB6 = {
@@ -838,6 +857,7 @@
 				D2D06DD823A6A52A0096D3D8 /* VideoListViewModelLoadNewErrorTest.swift in Sources */,
 				D2D06DC523A679730096D3D8 /* VideoEntityFactory.swift in Sources */,
 				D2D06DB323A634B20096D3D8 /* VideoListAPISuccessWithEmptyDataTest.swift in Sources */,
+				A5615E8323A737AF00907091 /* Bundle+Test.swift in Sources */,
 				D2D06DB123A6290F0096D3D8 /* VideoListAPIFailedTimeoutResponseTest.swift in Sources */,
 				D2D06DD423A6A4170096D3D8 /* VideoListViewModelLoadNewSuccessWithEmptyDataTest.swift in Sources */,
 				A5615E7D23A7362A00907091 /* Double+Test2.swift in Sources */,
