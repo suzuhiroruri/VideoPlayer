@@ -1,5 +1,5 @@
 //
-//  VideoListViewModelLoadNewSuccessEmptyTest.swift
+//  VideoListViewModelLoadNewSuccessTest.swift
 //  VideoPlayerTests
 //
 //  Created by Hiromasa Suzuki on 2019/12/16.
@@ -9,14 +9,14 @@
 import XCTest
 import SwiftyJSON
 
-class VideoListViewModelLoadNewSuccessEmptyTest: XCTestCase {
+class VideoListViewModelLoadNewSuccessTest: XCTestCase {
   private let viewModel = VideoListViewModel()
   override func setUp() {
     super.setUp()
 
     // API test setting
     let testConfig = APITestConfig(apiType: .appAPIHost,
-                                   jsonFileType: .videoListViewModelLoadNewSuccessEmptyTest,
+                                   jsonFileType: .videoListViewModelLoadNewSuccessWithDataTest,
                                    statusCode: 200)
     TestStubs.setUp(config: testConfig)
   }

@@ -16,7 +16,7 @@ class VideoListViewModelLoadNewErrorTest: XCTestCase {
 
     // API test setting
     let testConfig = APITestConfig(apiType: .appAPIHost,
-                                   jsonFileType: .videoListViewModelLoadNewSuccessTest,
+                                   jsonFileType: .videoListViewModelLoadNewSuccessWithDataTest,
                                    statusCode: 200)
     TestStubs.setUpDownNetwork(config: testConfig, code: URLError.unknown.rawValue)
   }

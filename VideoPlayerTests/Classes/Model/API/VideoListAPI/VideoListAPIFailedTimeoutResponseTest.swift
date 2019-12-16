@@ -1,5 +1,5 @@
 //
-//  VideoListAPIFailedEmptyTest.swift
+//  VideoListAPIFailedTimeoutResponseTest.swift.swift
 //  VideoPlayerTests
 //
 //  Created by Hiromasa Suzuki on 2019/12/15.
@@ -9,7 +9,7 @@
 import XCTest
 import SwiftyJSON
 
-class VideoListAPIFailedEmptyTest: XCTestCase {
+class VideoListAPIFailedTimeoutResponseTest: XCTestCase {
   private let requestAPIModel = APIModel()
 
   override func setUp() {
@@ -17,8 +17,9 @@ class VideoListAPIFailedEmptyTest: XCTestCase {
 
     // API test setting
     let testConfig = APITestConfig(apiType: .appAPIHost,
-                                   jsonFileType: .videoListAPISuccessEmptyTest,
-                                   statusCode: 200)
+                                   jsonFileType: .videoListAPISuccessWithDataTest,
+                                   statusCode: 200,
+                                   requestTime: 20)
     TestStubs.setUp(config: testConfig)
   }
 
@@ -31,14 +32,15 @@ class VideoListAPIFailedEmptyTest: XCTestCase {
     let expectation = self.expectation(description: "Expectation")
     requestAPIModel.videoListAPI(completion: { response in
       switch response {
-      case .success(let json):
-        guard json.isEmpty else {
-          XCTFail("Json is not empty")
-          return
+      case .success:
+        XCTFail("This test should be failed.")
+      case .error(let error):
+        switch error {
+        case .apiHttpError(let code):
+          XCTAssertEqual(code, URLError.timedOut)
+        default:
+          XCTFail("Unexpected error.")
         }
-        XCTAssertTrue(true, "Success in empty test.")
-      case .error:
-        XCTFail("Unexpected error.")
       }
       expectation.fulfill()
     })

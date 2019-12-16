@@ -18,19 +18,20 @@ class ModelTestConfigration {
   /// - Returns: JSON?
   static func getTestJSON(jsonFileType: ModelTestConfigration.JsonFileType) -> JSON? {
     let testBundle = Bundle(for: TestStubs.self)
-    if let jsonPath = testBundle.path(forResource: jsonFileType.rawValue, ofType: "json") {
-      let url = URL(fileURLWithPath: jsonPath)
-      if let jsonData = try? Data(contentsOf: url) {
-        return try? JSON(data: jsonData)
-      }
+    guard let jsonPath = testBundle.path(forResource: jsonFileType.rawValue, ofType: "json") else {
+      return nil
     }
-    return nil
+    let url = URL(fileURLWithPath: jsonPath)
+    guard let jsonData = try? Data(contentsOf: url) else {
+      return nil
+    }
+    return try? JSON(data: jsonData)
   }
 }
 
 extension ModelTestConfigration {
   enum JsonFileType: String {
-    case videoEntityFactoryCreateArrayFromJSONObjectSuccessTest = "VideoEntityFactoryCreateArrayFromJSONObjectSuccessTest"
-    case videoEntityFactoryCreateArrayFromJSONObjectSuccessEmptyTest = "VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmptyTest"
+    case videoEntityFactoryCreateArrayFromJSONObjectFillDataTest = "VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest"
+    case videoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest = "VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest"
   }
 }
