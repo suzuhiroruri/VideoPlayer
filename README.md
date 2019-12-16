@@ -2,6 +2,8 @@
 <img src="/VideoPlayer/Resources/logo.png" title="VideoPlayer">
 </div>
 
+[![Swift Version](https://img.shields.io/badge/language-swift%205.0-brightgreen.svg)](https://developer.apple.com/swift) 
+
 ![demo](/VideoPlayer/Resources/demo.gif)
 
 ## Table of content
