@@ -8,10 +8,20 @@
 
 ## Table of content
 
+- [Features](#Features)
 - [Running the App](#Running-the-App)
 - [Testing](#Testing)
 - [Requirements](#Requirements)
 - [Coding Rules](#Coding-rules)
+
+## Features
+- [x] List videos thumbnail with infomation of videos
+- [x] Play video at full screen mode
+- [x] Keep display playing and ending time
+- [x] Support for horizontal and vertical play mode
+- [x] Adjust brightness by slide vertical at left side of screen
+- [x] Adjust volume by slide vertical at right side of screen
+- [x] Slide horizontal to fast forward and rewind
 
 ## Running the App
 
