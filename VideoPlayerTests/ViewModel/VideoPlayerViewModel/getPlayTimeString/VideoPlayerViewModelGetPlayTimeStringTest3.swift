@@ -6,10 +6,7 @@
 //  Copyright © 2019 Hiromasa Suzuki. All rights reserved.
 //
 
-import Foundation
 import XCTest
-import MSPlayer
-import UIKit
 
 class VideoPlayerViewModelGetPlayTimeStringTest3: XCTestCase {
   let viewModel = VideoPlayerViewModel()
