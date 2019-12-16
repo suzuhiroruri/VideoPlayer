@@ -10,8 +10,8 @@ import XCTest
 import SwiftyJSON
 
 class VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmptyTest: XCTestCase {
-  let requestAPIModel = APIModel()
-  lazy var json: JSON = uninitialized()
+  private let requestAPIModel = APIModel()
+  private lazy var json: JSON = uninitialized()
 
   override func setUp() {
     super.setUp()

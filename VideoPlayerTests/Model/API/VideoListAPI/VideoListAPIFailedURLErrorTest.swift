@@ -9,8 +9,7 @@
 import XCTest
 
 class VideoListAPIFailedURLErrorTest: XCTestCase {
-
-  let requestAPIModel = APIModel()
+  private let requestAPIModel = APIModel()
 
   override func setUp() {
     super.setUp()

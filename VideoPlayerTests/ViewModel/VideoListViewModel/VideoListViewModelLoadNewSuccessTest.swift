@@ -10,7 +10,7 @@ import XCTest
 import SwiftyJSON
 
 class VideoListViewModelLoadNewSuccessTest: XCTestCase {
-  let viewModel = VideoListViewModel()
+  private let viewModel = VideoListViewModel()
   override func setUp() {
     super.setUp()
 

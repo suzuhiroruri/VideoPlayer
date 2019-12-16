@@ -11,7 +11,7 @@ import XCTest
 import MSPlayer
 
 class VideoPlayerViewModelNilNoURLEntityTest: XCTestCase {
-  let viewModel = VideoPlayerViewModel()
+  private let viewModel = VideoPlayerViewModel()
 
   override func setUp() {
     super.setUp()

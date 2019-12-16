@@ -9,10 +9,15 @@
 import XCTest
 
 class VideoPlayerViewModelGetPlayTimeStringTest1: XCTestCase {
-  let viewModel = VideoPlayerViewModel()
+  private let viewModel = VideoPlayerViewModel()
+
+  private var current: TimeInterval = TimeInterval(0.0)
+  private var total: TimeInterval = TimeInterval(0.0)
 
   override func setUp() {
     super.setUp()
+    current = TimeInterval(100.0)
+    total = TimeInterval(150.0)
   }
 
   override func tearDown() {
@@ -20,8 +25,6 @@ class VideoPlayerViewModelGetPlayTimeStringTest1: XCTestCase {
   }
 
   func test() {
-    let current = TimeInterval(100.0)
-    let total = TimeInterval(150.0)
     let playTimeString = viewModel.getPlayTimeString(current: current, total: total)
     XCTAssertEqual("01:40", playTimeString.currentTime)
     XCTAssertEqual("00:50", playTimeString.remainTime)
