@@ -1,4 +1,7 @@
-# VideoPlayer
+<div align="center">
+<img src="/VideoPlayer/Resources/logo.png" title="VideoPlayer">
+</div>
+
 ![demo](/VideoPlayer/Resources/demo.gif)
 
 ## Table of content
