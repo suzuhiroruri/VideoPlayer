@@ -44,6 +44,7 @@ extension APIModel {
       }
       switch response.result {
       case .success(let data):
+
         guard response.response != nil else {
           completionBlock(.error(.apiServerUnknownError))
           return
@@ -51,21 +52,17 @@ extension APIModel {
 
         let json = JSON(data)
 
-        guard json.error == nil else {
-          completionBlock(.error(.apiServerUnknownError))
-          return
-        }
-
         completionBlock(.success(json))
       case .failure(let error):
         guard let error = error as? URLError else {
           completionBlock(.error(.apiServerUnknownError))
           return
         }
-        if error.code  == URLError.Code.notConnectedToInternet {
+        if error.code == URLError.Code.notConnectedToInternet {
+          completionBlock(.error(VPError.apiInternetNotConnect))
           return
         } else {
-          completionBlock(.error(.apiServerUnknownError))
+          completionBlock(.error(VPError.apiHttpError(status: error.code)))
           return
         }
       }

@@ -30,6 +30,9 @@ class VideoPlayerViewModel {
   func getPlayTimeString(current: TimeInterval,
                          total: TimeInterval) -> (currentTime: String, remainTime: String) {
     var playTimeString = (currentTime:"", remainTime: "")
+    guard current < total else {
+      return playTimeString
+    }
 
     let currentTimeInterval: Double = floor(current)
     playTimeString.currentTime = currentTimeInterval.makeTimeDurationString()
