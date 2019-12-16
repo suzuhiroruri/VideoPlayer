@@ -37,6 +37,6 @@ class VideoEntityFactoryCreateArrayFromJSONObjectSuccessEmptyTest: XCTestCase {
       XCTFail("Video entity array is not empty.")
       return
     }
-    XCTAssertTrue(true, "Expected.")
+    XCTAssertTrue(true, "Success in empty test.")
   }
 }

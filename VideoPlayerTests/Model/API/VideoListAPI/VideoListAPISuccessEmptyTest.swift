@@ -32,9 +32,11 @@ class VideoListAPIFailedEmptyTest: XCTestCase {
     requestAPIModel.videoListAPI(completion: { response in
       switch response {
       case .success(let json):
-        for _ in json {
-          XCTFail("This test should be failed.")
+        guard json.isEmpty else {
+          XCTFail("Json is not empty")
+          return
         }
+        XCTAssertTrue(true, "Success in empty test.")
       case .error:
         XCTFail("Unexpected error.")
       }

@@ -20,7 +20,6 @@ class VideoEntityFactoryCreateArrayFromJSONObjectSuccessTest: XCTestCase {
       XCTFail("Json failure")
       return
     }
-
     self.json = json
   }
 
@@ -40,12 +39,13 @@ class VideoEntityFactoryCreateArrayFromJSONObjectSuccessTest: XCTestCase {
         XCTAssertEqual("90 seconds exercise for Chemistry", videoEntity.description)
         guard let thumbnailUrl = URL(string: "https://quipper.github.io/native-technical-exam/images/sakata.jpg"),
           let videoEntityThumbnailUrl = videoEntity.thumbnailUrl else {
+          XCTFail("Unwrap failure")
           return
         }
         XCTAssertEqual(thumbnailUrl, videoEntityThumbnailUrl)
         guard let videoUrl = URL(string: "https://quipper.github.io/native-technical-exam/videos/sakata.mp4"),
           let videoEntityVideoUrl = videoEntity.videoUrl else {
-          XCTFail("Unwrap error")
+          XCTFail("Unwrap failure")
           return
         }
         XCTAssertEqual(videoUrl, videoEntityVideoUrl)
@@ -56,12 +56,13 @@ class VideoEntityFactoryCreateArrayFromJSONObjectSuccessTest: XCTestCase {
         XCTAssertEqual("90 seconds exercise for Japanese Classics", videoEntity.description)
         guard let thumbnailUrl = URL(string: "https://quipper.github.io/native-technical-exam/images/okamoto.jpg"),
           let videoEntityThumbnailUrl = videoEntity.thumbnailUrl else {
-          XCTFail("Unwrap error")
+          XCTFail("Unwrap failure")
           return
         }
         XCTAssertEqual(thumbnailUrl, videoEntityThumbnailUrl)
         guard let videoUrl = URL(string: "https://quipper.github.io/native-technical-exam/videos/okamoto.mp4"),
           let videoEntityVideoUrl = videoEntity.videoUrl else {
+          XCTFail("Unwrap failure")
           return
         }
         XCTAssertEqual(videoUrl, videoEntityVideoUrl)
