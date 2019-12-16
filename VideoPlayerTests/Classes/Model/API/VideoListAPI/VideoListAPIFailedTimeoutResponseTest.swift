@@ -17,7 +17,7 @@ class VideoListAPIFailedTimeoutResponseTest: XCTestCase {
 
     // API test setting
     let testConfig = APITestConfig(apiType: .appAPIHost,
-                                   jsonFileType: .videoListAPISuccessWithDataTest,
+                                   jsonFileType: .videoListFillData,
                                    statusCode: 200,
                                    requestTime: 20)
     TestStubs.setUp(config: testConfig)

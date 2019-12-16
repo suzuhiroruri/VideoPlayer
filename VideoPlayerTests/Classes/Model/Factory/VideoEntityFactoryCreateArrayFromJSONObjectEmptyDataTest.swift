@@ -16,7 +16,7 @@ class VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest: XCTestCase {
   override func setUp() {
     super.setUp()
 
-    guard let json = ModelTestConfigration.getTestJSON(jsonFileType: .videoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest) else {
+    guard let json = ModelTestConfig.getTestJSON(jsonFileType: .videoListEmptyData) else {
       XCTFail("Json failure")
       return
     }

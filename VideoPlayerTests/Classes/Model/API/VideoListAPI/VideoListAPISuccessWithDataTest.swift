@@ -17,7 +17,7 @@ class VideoListAPISuccessWithDataTest: XCTestCase {
 
     // API test setting
     let testConfig = APITestConfig(apiType: .appAPIHost,
-                                   jsonFileType: .videoListAPISuccessWithDataTest,
+                                   jsonFileType: .videoListFillData,
                                    statusCode: 200)
     TestStubs.setUp(config: testConfig)
   }

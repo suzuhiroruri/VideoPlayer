@@ -1,5 +1,5 @@
 //
-//  ModelTestConfiguration.swift
+//  ModelTestConfig.swift
 //  VideoPlayerTests
 //
 //  Created by Hiromasa Suzuki on 2019/12/15.
@@ -11,12 +11,12 @@ import SwiftyJSON
 
 func uninitialized<T>() -> T { fatalError() }
 
-class ModelTestConfigration {
+class ModelTestConfig {
   /// making json data from bundle file
   ///
   /// - Parameter jsonFileType: file type
   /// - Returns: JSON?
-  static func getTestJSON(jsonFileType: ModelTestConfigration.JsonFileType) -> JSON? {
+  static func getTestJSON(jsonFileType: TestStubs.JsonFileType) -> JSON? {
     let testBundle = Bundle(for: TestStubs.self)
     guard let jsonPath = testBundle.path(forResource: jsonFileType.rawValue, ofType: "json") else {
       return nil
@@ -26,12 +26,5 @@ class ModelTestConfigration {
       return nil
     }
     return try? JSON(data: jsonData)
-  }
-}
-
-extension ModelTestConfigration {
-  enum JsonFileType: String {
-    case videoEntityFactoryCreateArrayFromJSONObjectFillDataTest = "VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest"
-    case videoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest = "VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest"
   }
 }

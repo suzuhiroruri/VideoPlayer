@@ -16,7 +16,7 @@ class VideoListViewModelLoadNewSuccessWithEmptyDataTest: XCTestCase {
 
     // API test setting
     let testConfig = APITestConfig(apiType: .appAPIHost,
-                                   jsonFileType: .videoListViewModelLoadNewSuccessWithEmptyDataTest,
+                                   jsonFileType: .videoListEmptyData,
                                    statusCode: 200)
     TestStubs.setUp(config: testConfig)
   }

@@ -23,6 +23,7 @@
 		A5615E6B23A35EC300907091 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6A23A35EC300907091 /* UIColor+.swift */; };
 		A5615E7123A38A7800907091 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E7023A38A7800907091 /* VideoPlayerViewController.swift */; };
 		A5615E7323A38A8C00907091 /* VideoPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5615E7223A38A8C00907091 /* VideoPlayer.storyboard */; };
+		A5615E7823A7332200907091 /* TestStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E7723A7332200907091 /* TestStubs.swift */; };
 		A604D8432330945C00B1FBB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8422330945C00B1FBB6 /* AppDelegate.swift */; };
 		A604D8452330945C00B1FBB6 /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604D8442330945C00B1FBB6 /* VideoListViewController.swift */; };
 		A604D8482330945C00B1FBB6 /* VideoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A604D8462330945C00B1FBB6 /* VideoList.storyboard */; };
@@ -36,32 +37,28 @@
 		D2D06D9423A5DA2A0096D3D8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9323A5DA2A0096D3D8 /* UIView+.swift */; };
 		D2D06D9623A5DDEA0096D3D8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9523A5DDEA0096D3D8 /* Double+.swift */; };
 		D2D06D9923A6007B0096D3D8 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9823A6007B0096D3D8 /* VideoPlayerViewModel.swift */; };
-		D2D06D9C23A61A500096D3D8 /* APITestConfigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9B23A61A500096D3D8 /* APITestConfigration.swift */; };
+		D2D06D9C23A61A500096D3D8 /* APITestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9B23A61A500096D3D8 /* APITestConfig.swift */; };
 		D2D06D9D23A61B0B0096D3D8 /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5723A0E73000907091 /* Bundle+.swift */; };
 		D2D06D9E23A61BF80096D3D8 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5523A0E5D800907091 /* APIModel.swift */; };
 		D2D06D9F23A61C3E0096D3D8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5615E4323A0BB4600907091 /* Alamofire.framework */; };
 		D2D06DA823A61F190096D3D8 /* VideoListAPISuccessWithDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DA723A61F190096D3D8 /* VideoListAPISuccessWithDataTest.swift */; };
-		D2D06DAC23A621840096D3D8 /* VideoListAPISuccessWithDataTest.json in Resources */ = {isa = PBXBuildFile; fileRef = D2D06DAB23A621840096D3D8 /* VideoListAPISuccessWithDataTest.json */; };
+		D2D06DAC23A621840096D3D8 /* VideoListFillData.json in Resources */ = {isa = PBXBuildFile; fileRef = D2D06DAB23A621840096D3D8 /* VideoListFillData.json */; };
 		D2D06DAD23A622C10096D3D8 /* VideoListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6423A208AD00907091 /* VideoListAPI.swift */; };
 		D2D06DAE23A623410096D3D8 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5923A0E90100907091 /* APIRequest.swift */; };
 		D2D06DAF23A623520096D3D8 /* VPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5B23A0EBFF00907091 /* VPError.swift */; };
 		D2D06DB123A6290F0096D3D8 /* VideoListAPIFailedTimeoutResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DB023A6290F0096D3D8 /* VideoListAPIFailedTimeoutResponseTest.swift */; };
 		D2D06DB323A634B20096D3D8 /* VideoListAPISuccessWithEmptyDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DB223A634B20096D3D8 /* VideoListAPISuccessWithEmptyDataTest.swift */; };
-		D2D06DB523A634EC0096D3D8 /* VideoListAPISuccessWithEmptyDataTest.json in Resources */ = {isa = PBXBuildFile; fileRef = D2D06DB423A634EC0096D3D8 /* VideoListAPISuccessWithEmptyDataTest.json */; };
+		D2D06DB523A634EC0096D3D8 /* VideoListEmptyData.json in Resources */ = {isa = PBXBuildFile; fileRef = D2D06DB423A634EC0096D3D8 /* VideoListEmptyData.json */; };
 		D2D06DBB23A63D120096D3D8 /* VideoListAPIFailedHttpErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DBA23A63D120096D3D8 /* VideoListAPIFailedHttpErrorTest.swift */; };
 		D2D06DBD23A641D10096D3D8 /* VideoListAPIFailedURLErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DBC23A641D10096D3D8 /* VideoListAPIFailedURLErrorTest.swift */; };
 		D2D06DC023A675320096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DBF23A675320096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest.swift */; };
-		D2D06DC223A676F00096D3D8 /* ModelTestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DC123A676F00096D3D8 /* ModelTestConfiguration.swift */; };
-		D2D06DC423A677D20096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest.json in Resources */ = {isa = PBXBuildFile; fileRef = D2D06DC323A677D20096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest.json */; };
+		D2D06DC223A676F00096D3D8 /* ModelTestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DC123A676F00096D3D8 /* ModelTestConfig.swift */; };
 		D2D06DC523A679730096D3D8 /* VideoEntityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E6623A2198D00907091 /* VideoEntityFactory.swift */; };
 		D2D06DC623A679EE0096D3D8 /* VideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5615E5123A0E2BE00907091 /* VideoEntity.swift */; };
 		D2D06DC823A67EAD0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DC723A67EAD0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.swift */; };
-		D2D06DCA23A67FCB0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.json in Resources */ = {isa = PBXBuildFile; fileRef = D2D06DC923A67FCB0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.json */; };
 		D2D06DCF23A6881B0096D3D8 /* VideoListViewModelLoadNewSuccessWithDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DCE23A6881B0096D3D8 /* VideoListViewModelLoadNewSuccessWithDataTest.swift */; };
-		D2D06DD123A68A0A0096D3D8 /* VideoListViewModelLoadNewSuccessWithDataTest.json in Resources */ = {isa = PBXBuildFile; fileRef = D2D06DD023A68A0A0096D3D8 /* VideoListViewModelLoadNewSuccessWithDataTest.json */; };
 		D2D06DD223A68AF30096D3D8 /* VideoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BF7D7239FD7160001E662 /* VideoListViewModel.swift */; };
 		D2D06DD423A6A4170096D3D8 /* VideoListViewModelLoadNewSuccessWithEmptyDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DD323A6A4170096D3D8 /* VideoListViewModelLoadNewSuccessWithEmptyDataTest.swift */; };
-		D2D06DD623A6A4630096D3D8 /* VideoListViewModelLoadNewSuccessWithEmptyDataTest.json in Resources */ = {isa = PBXBuildFile; fileRef = D2D06DD523A6A4630096D3D8 /* VideoListViewModelLoadNewSuccessWithEmptyDataTest.json */; };
 		D2D06DD823A6A52A0096D3D8 /* VideoListViewModelLoadNewErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DD723A6A52A0096D3D8 /* VideoListViewModelLoadNewErrorTest.swift */; };
 		D2D06DDB23A6A8BA0096D3D8 /* VideoPlayerViewModelNotNilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06DDA23A6A8BA0096D3D8 /* VideoPlayerViewModelNotNilTest.swift */; };
 		D2D06DDC23A6A9020096D3D8 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D06D9823A6007B0096D3D8 /* VideoPlayerViewModel.swift */; };
@@ -106,6 +103,7 @@
 		A5615E6C23A3669900907091 /* MobilePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobilePlayer.framework; path = Carthage/Build/iOS/MobilePlayer.framework; sourceTree = "<group>"; };
 		A5615E7023A38A7800907091 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		A5615E7223A38A8C00907091 /* VideoPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoPlayer.storyboard; sourceTree = "<group>"; };
+		A5615E7723A7332200907091 /* TestStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStubs.swift; sourceTree = "<group>"; };
 		A604D83F2330945C00B1FBB6 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A604D8422330945C00B1FBB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A604D8442330945C00B1FBB6 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
@@ -125,23 +123,19 @@
 		D2D06D9323A5DA2A0096D3D8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		D2D06D9523A5DDEA0096D3D8 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		D2D06D9823A6007B0096D3D8 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
-		D2D06D9B23A61A500096D3D8 /* APITestConfigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestConfigration.swift; sourceTree = "<group>"; };
+		D2D06D9B23A61A500096D3D8 /* APITestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestConfig.swift; sourceTree = "<group>"; };
 		D2D06DA723A61F190096D3D8 /* VideoListAPISuccessWithDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListAPISuccessWithDataTest.swift; sourceTree = "<group>"; };
-		D2D06DAB23A621840096D3D8 /* VideoListAPISuccessWithDataTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoListAPISuccessWithDataTest.json; sourceTree = "<group>"; };
+		D2D06DAB23A621840096D3D8 /* VideoListFillData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoListFillData.json; sourceTree = "<group>"; };
 		D2D06DB023A6290F0096D3D8 /* VideoListAPIFailedTimeoutResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListAPIFailedTimeoutResponseTest.swift; sourceTree = "<group>"; };
 		D2D06DB223A634B20096D3D8 /* VideoListAPISuccessWithEmptyDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListAPISuccessWithEmptyDataTest.swift; sourceTree = "<group>"; };
-		D2D06DB423A634EC0096D3D8 /* VideoListAPISuccessWithEmptyDataTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoListAPISuccessWithEmptyDataTest.json; sourceTree = "<group>"; };
+		D2D06DB423A634EC0096D3D8 /* VideoListEmptyData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoListEmptyData.json; sourceTree = "<group>"; };
 		D2D06DBA23A63D120096D3D8 /* VideoListAPIFailedHttpErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListAPIFailedHttpErrorTest.swift; sourceTree = "<group>"; };
 		D2D06DBC23A641D10096D3D8 /* VideoListAPIFailedURLErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListAPIFailedURLErrorTest.swift; sourceTree = "<group>"; };
 		D2D06DBF23A675320096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest.swift; sourceTree = "<group>"; };
-		D2D06DC123A676F00096D3D8 /* ModelTestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTestConfiguration.swift; sourceTree = "<group>"; };
-		D2D06DC323A677D20096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest.json; sourceTree = "<group>"; };
+		D2D06DC123A676F00096D3D8 /* ModelTestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTestConfig.swift; sourceTree = "<group>"; };
 		D2D06DC723A67EAD0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.swift; sourceTree = "<group>"; };
-		D2D06DC923A67FCB0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.json; sourceTree = "<group>"; };
 		D2D06DCE23A6881B0096D3D8 /* VideoListViewModelLoadNewSuccessWithDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewModelLoadNewSuccessWithDataTest.swift; sourceTree = "<group>"; };
-		D2D06DD023A68A0A0096D3D8 /* VideoListViewModelLoadNewSuccessWithDataTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoListViewModelLoadNewSuccessWithDataTest.json; sourceTree = "<group>"; };
 		D2D06DD323A6A4170096D3D8 /* VideoListViewModelLoadNewSuccessWithEmptyDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewModelLoadNewSuccessWithEmptyDataTest.swift; sourceTree = "<group>"; };
-		D2D06DD523A6A4630096D3D8 /* VideoListViewModelLoadNewSuccessWithEmptyDataTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoListViewModelLoadNewSuccessWithEmptyDataTest.json; sourceTree = "<group>"; };
 		D2D06DD723A6A52A0096D3D8 /* VideoListViewModelLoadNewErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewModelLoadNewErrorTest.swift; sourceTree = "<group>"; };
 		D2D06DDA23A6A8BA0096D3D8 /* VideoPlayerViewModelNotNilTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModelNotNilTest.swift; sourceTree = "<group>"; };
 		D2D06DDE23A6ABEA0096D3D8 /* VideoPlayerViewModelNilNoVideoEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModelNilNoVideoEntityTest.swift; sourceTree = "<group>"; };
@@ -247,10 +241,30 @@
 		A5615E7423A7303A00907091 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5615E7623A7330000907091 /* Configuration */,
 				D2D06DA523A61ED30096D3D8 /* Model */,
 				D2D06DCB23A687B90096D3D8 /* ViewModel */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		A5615E7523A730B000907091 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D2D06DAB23A621840096D3D8 /* VideoListFillData.json */,
+				D2D06DB423A634EC0096D3D8 /* VideoListEmptyData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A5615E7623A7330000907091 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D2D06DC123A676F00096D3D8 /* ModelTestConfig.swift */,
+				D2D06D9B23A61A500096D3D8 /* APITestConfig.swift */,
+				A5615E7723A7332200907091 /* TestStubs.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		A604D8362330945C00B1FBB6 = {
@@ -288,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				A5615E7423A7303A00907091 /* Classes */,
+				A5615E7523A730B000907091 /* Resources */,
 				A604D8592330945F00B1FBB6 /* Info.plist */,
 			);
 			path = VideoPlayerTests;
@@ -363,7 +378,6 @@
 		D2D06DA523A61ED30096D3D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D2D06DC123A676F00096D3D8 /* ModelTestConfiguration.swift */,
 				D2D06DA623A61EFA0096D3D8 /* API */,
 				D2D06DBE23A674EA0096D3D8 /* Factory */,
 			);
@@ -373,7 +387,6 @@
 		D2D06DA623A61EFA0096D3D8 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D2D06D9B23A61A500096D3D8 /* APITestConfigration.swift */,
 				D2D06DCC23A687DF0096D3D8 /* VideoListAPI */,
 			);
 			path = API;
@@ -383,9 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				D2D06DBF23A675320096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest.swift */,
-				D2D06DC323A677D20096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest.json */,
 				D2D06DC723A67EAD0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.swift */,
-				D2D06DC923A67FCB0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.json */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -403,9 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				D2D06DA723A61F190096D3D8 /* VideoListAPISuccessWithDataTest.swift */,
-				D2D06DAB23A621840096D3D8 /* VideoListAPISuccessWithDataTest.json */,
 				D2D06DB223A634B20096D3D8 /* VideoListAPISuccessWithEmptyDataTest.swift */,
-				D2D06DB423A634EC0096D3D8 /* VideoListAPISuccessWithEmptyDataTest.json */,
 				D2D06DB023A6290F0096D3D8 /* VideoListAPIFailedTimeoutResponseTest.swift */,
 				D2D06DBA23A63D120096D3D8 /* VideoListAPIFailedHttpErrorTest.swift */,
 				D2D06DBC23A641D10096D3D8 /* VideoListAPIFailedURLErrorTest.swift */,
@@ -417,9 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				D2D06DCE23A6881B0096D3D8 /* VideoListViewModelLoadNewSuccessWithDataTest.swift */,
-				D2D06DD023A68A0A0096D3D8 /* VideoListViewModelLoadNewSuccessWithDataTest.json */,
 				D2D06DD323A6A4170096D3D8 /* VideoListViewModelLoadNewSuccessWithEmptyDataTest.swift */,
-				D2D06DD523A6A4630096D3D8 /* VideoListViewModelLoadNewSuccessWithEmptyDataTest.json */,
 				D2D06DD723A6A52A0096D3D8 /* VideoListViewModelLoadNewErrorTest.swift */,
 			);
 			path = VideoListViewModel;
@@ -558,12 +565,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2D06DD123A68A0A0096D3D8 /* VideoListViewModelLoadNewSuccessWithDataTest.json in Resources */,
-				D2D06DD623A6A4630096D3D8 /* VideoListViewModelLoadNewSuccessWithEmptyDataTest.json in Resources */,
-				D2D06DCA23A67FCB0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.json in Resources */,
-				D2D06DC423A677D20096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectFillDataTest.json in Resources */,
-				D2D06DAC23A621840096D3D8 /* VideoListAPISuccessWithDataTest.json in Resources */,
-				D2D06DB523A634EC0096D3D8 /* VideoListAPISuccessWithEmptyDataTest.json in Resources */,
+				D2D06DAC23A621840096D3D8 /* VideoListFillData.json in Resources */,
+				D2D06DB523A634EC0096D3D8 /* VideoListEmptyData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,6 +820,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D06DDF23A6ABEA0096D3D8 /* VideoPlayerViewModelNilNoVideoEntityTest.swift in Sources */,
+				A5615E7823A7332200907091 /* TestStubs.swift in Sources */,
 				D2D06DC623A679EE0096D3D8 /* VideoEntity.swift in Sources */,
 				D2D06DAF23A623520096D3D8 /* VPError.swift in Sources */,
 				D2D06DCF23A6881B0096D3D8 /* VideoListViewModelLoadNewSuccessWithDataTest.swift in Sources */,
@@ -829,7 +833,7 @@
 				D2D06D9E23A61BF80096D3D8 /* APIModel.swift in Sources */,
 				D2D06DBD23A641D10096D3D8 /* VideoListAPIFailedURLErrorTest.swift in Sources */,
 				D2D06DE923A6AFD70096D3D8 /* VideoPlayerViewModelGetPlayTimeStringTest3.swift in Sources */,
-				D2D06DC223A676F00096D3D8 /* ModelTestConfiguration.swift in Sources */,
+				D2D06DC223A676F00096D3D8 /* ModelTestConfig.swift in Sources */,
 				D2D06DAE23A623410096D3D8 /* APIRequest.swift in Sources */,
 				D2D06D9D23A61B0B0096D3D8 /* Bundle+.swift in Sources */,
 				D2D06DC823A67EAD0096D3D8 /* VideoEntityFactoryCreateArrayFromJSONObjectEmptyDataTest.swift in Sources */,
@@ -838,7 +842,7 @@
 				D2D06DAD23A622C10096D3D8 /* VideoListAPI.swift in Sources */,
 				D2D06DD223A68AF30096D3D8 /* VideoListViewModel.swift in Sources */,
 				D2D06DE723A6AF830096D3D8 /* VideoPlayerViewModelGetPlayTimeStringTest2.swift in Sources */,
-				D2D06D9C23A61A500096D3D8 /* APITestConfigration.swift in Sources */,
+				D2D06D9C23A61A500096D3D8 /* APITestConfig.swift in Sources */,
 				D2D06DE523A6AD660096D3D8 /* VideoPlayerViewModelGetPlayTimeStringTest1.swift in Sources */,
 				D2D06DA823A61F190096D3D8 /* VideoListAPISuccessWithDataTest.swift in Sources */,
 				D2D06DDD23A6A9BD0096D3D8 /* Double+.swift in Sources */,
